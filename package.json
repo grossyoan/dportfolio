@@ -2,6 +2,7 @@
   "name": "dporfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://grossyoan.fr/dportfolio",
   "dependencies": {
     "baseui": "^8.11.0",
     "prop-types": "^15.7.2",

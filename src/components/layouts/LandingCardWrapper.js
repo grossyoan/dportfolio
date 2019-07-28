@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import {Block} from 'baseui/block';
 
-const LandingCardWrapper = ({children, ...props}) => {
+const LandingWrapper = ({children, ...props}) => {
     return(
         <Block
         overrides={{
@@ -25,15 +25,15 @@ const LandingCardWrapper = ({children, ...props}) => {
 
 
 
-LandingCardWrapper.propTypes={
+LandingWrapper.propTypes={
     children: PropTypes.object,
 }
 
-LandingCardWrapper.defaultProps={
+LandingWrapper.defaultProps={
     children: {},
 }
 
 
 
 
-export default LandingCardWrapper;
+export default LandingWrapper;

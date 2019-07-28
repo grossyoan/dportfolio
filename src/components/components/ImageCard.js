@@ -14,31 +14,36 @@ const StyledImageCard = styled('img', ({$theme, animationDelay, heightAnimation,
         objectFit:"cover",
         transition: "transform 2s ease, opacity 1s ease",
         transitionDelay:"0.05s",
-        transformOrigin:"bottom left",
         animationDuration: ".5s",
         animationDelay: animationDelay,
         animationFillMode:"forwards",
+        animationTimingFunction: "ease", 
         animationName: heightAnimation ?
          {
             from: {
               height: "0%",
+              // transform: "translateY(100%) scale(1)"
             },
             to: {
               height:"100%",
+              // transform: "translateY(0%) scale(1)"
             }
           }  
           :
         {
             from: {
               width: "0%",
+              // transform: "translateX(-100%) scale(1)"
+
             },
             to: {
               width: "100%",
+              // transform: "translateX(0%) scale(1)"
             }
         },
         ":hover":{
             transform: "scale(1.05)",
-            opacity: "0.8",
+            opacity: "0.5",
         },
     }),
 )
