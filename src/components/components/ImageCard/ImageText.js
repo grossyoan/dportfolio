@@ -9,6 +9,9 @@ const ImageText = ({children, font, animationDelay, ...props}) =>{
         overrides={{
             Block:{
                 style: {
+                    ":before":{
+                        content:"3D"
+                    },
                     textAlign: "center",
                     position: "absolute",
                     zIndex:"50",

@@ -4,7 +4,7 @@ import {styled} from 'baseui';
 
 
 
-const StyledImageCard = styled('img', ({$theme, animationDelay, heightAnimation,src, ...props}) => 
+const StyledImageCard = styled('img', ({$theme, animationDelay, heightAnimation,src, isHovered, ...props}) => 
     ({
         position: "absolute",
         left: "0",
@@ -12,6 +12,8 @@ const StyledImageCard = styled('img', ({$theme, animationDelay, heightAnimation,
         width: heightAnimation ? "100%" : "0%",
         height: heightAnimation ? "0%" : "100%",
         objectFit:"cover",
+        transform: isHovered ? "scale(1.05)" : "scale(1)",
+        opacity: isHovered ? "0.5" : "1",
         transition: "transform 2s ease, opacity 1s ease",
         transitionDelay:"0.05s",
         animationDuration: ".5s",
@@ -41,17 +43,12 @@ const StyledImageCard = styled('img', ({$theme, animationDelay, heightAnimation,
               // transform: "translateX(0%) scale(1)"
             }
         },
-        ":hover":{
-            transform: "scale(1.05)",
-            opacity: "0.5",
-        },
     }),
 )
 
-const ImageCard = ({src, animationDelay, heightAnimation, ...props}) =>{
-    console.log(src)
+const ImageCard = ({src, animationDelay, heightAnimation, isHovered, ...props}) =>{
     return(
-        <StyledImageCard  heightAnimation={heightAnimation} animationDelay={animationDelay} src={src}/>
+        <StyledImageCard  isHovered={isHovered} heightAnimation={heightAnimation} animationDelay={animationDelay} src={src}/>
     )
 }
 
@@ -60,12 +57,14 @@ ImageCard.propTypes={
     src: PropTypes.string,
     animationDelay: PropTypes.string,
     heightAnimation: PropTypes.bool,
+    isHovered: PropTypes.bool,
 }
 
 ImageCard.defaultProps={
     src: "",
     animationDelay: "0s",
     heightAnimation: false,
+    isHovered: false,
 }
 
 
