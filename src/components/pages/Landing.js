@@ -17,7 +17,7 @@ import LandingImageAbout from "assets/img/landing/landingImageAbout.jpg";
 
 const Landing = () => {
     const [heroButtonClicked, setHeroButtonClicked] = useState(false)
-    const refCreator = React.createRef();
+    const inputEl = useRef(null);
     return(
         <Block
         overrides={{
@@ -39,7 +39,7 @@ const Landing = () => {
             
             >Enter</Button>
             <HeroImage src={HeroBackgroundFront}></HeroImage>
-            <HeroImage src={HeroBackgroundBack}></HeroImage>
+            <HeroImage ref={inputEl} src={HeroBackgroundBack}></HeroImage>
         </Hero>
         {
             heroButtonClicked ? 

@@ -5,7 +5,7 @@ import parallaxEffect from "helpers/parallaxEffect";
 
 
 
-const StyledHeroImage = styled('img', ({$theme, animationDelay, heightAnimation,src, isHovered, ...props}) => 
+const StyledHeroImage = styled('img', ({$theme, animationDelay, heightAnimation,src, isHovered, ref,...props}) => 
     ({
         position: "absolute",
         zIndex:"-1",
@@ -19,10 +19,12 @@ const StyledHeroImage = styled('img', ({$theme, animationDelay, heightAnimation,
     }),
 )
 
-const HeroImage = ({src, ...props}) => {
+const HeroImage = ({src, ref, ...props}) => {
+    console.log("ref",ref)
     return(
         <StyledHeroImage 
         src={src}
+        ref={ref}
         {...props}
         />
     )
