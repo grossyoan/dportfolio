@@ -1,42 +1,43 @@
-import React from "react";
+import React, {forwardRef, useEffect} from "react";
 import PropTypes from "prop-types";
 import {styled} from 'baseui';
 import parallaxEffect from "helpers/parallaxEffect";
-
-
-
-const StyledHeroImage = styled('img', ({$theme, animationDelay, heightAnimation,src, isHovered, ref,...props}) => 
+const StyledHeroImage = styled('img', ({$theme, animationDelay, heightAnimation,src, isHovered, ref, parallax, transform,...props}) => 
     ({
         position: "absolute",
-        zIndex:"-1",
-        left: "0",
-        bottom: "0",
-        objectFit:"cover",
-        opacity:"0.8",
-        filter:"blur(2px)",
-        width:"100%",
-        height:"100%",
+        zIndex: parallax ? "-1" : "-3",
+        transform: transform,
+        boxShadow: "inset 10px 10px 5px 0px rgba(0,0,0,0.75)"
+
     }),
 )
 
-const HeroImage = ({src, ref, ...props}) => {
-    console.log("ref",ref)
+const HeroImage = forwardRef(({src, parallax, ...props}, ref) => {
+    useEffect(() => {
+        if (ref) 
+            parallaxEffect(ref.current)
+    })    
     return(
-        <StyledHeroImage 
-        src={src}
-        ref={ref}
-        {...props}
-        />
+            <StyledHeroImage 
+            src={src}
+            ref={ref}
+            parallax={parallax}
+            {...props}
+            />
+
     )
-}
+})
+
 
 
 HeroImage.propTypes={
     src: PropTypes.string,
+    transform: PropTypes.string,
 }
 
 HeroImage.defaultProps={
-    src: "",
+    transform: "scale(1)",
+
 }
 
 

@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {Block} from 'baseui/block';
+import Cursor from "assets/img/hero/cursor.svg"
 const Hero = ({children, heroButtonClicked, ...props}) => {
     return(
         <Block
@@ -18,8 +19,9 @@ const Hero = ({children, heroButtonClicked, ...props}) => {
                     transform: heroButtonClicked ? "translateX(100%)" : "",
                     opacity: heroButtonClicked ? "0" : "1",
                     transition: "transform 1s ease, opacity .6s ease",
-                    zIndex:"50",
-                    background:"black",
+                    zIndex:"0",
+                    overflow:"hidden",
+                    userSelect:"none"
                 }
             }
         }}

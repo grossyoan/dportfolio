@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 import {Block} from "baseui/block"
 import Hero from "components/layouts/Hero"
 import HeroImage from "components/components/Hero/HeroImage"
-import HeroBackgroundFront from "assets/img/hero/Background_Front.png"
-import HeroBackgroundBack from "assets/img/hero/Background_Background.png"
-import { Button } from "baseui/button"
+import HeroBackgroundFront from "assets/img/hero/Background_Character.png"
+import HeroBackgroundBack from "assets/img/hero/Background_Back.png"
+import Particles from "components/components/Hero/Particles";
 import LandingWrapper from "components/layouts/LandingCardWrapper"
 import ImageCardWrapper from "components/components/ImageCard/ImageCardWrapper"
 import LandingImage3D from "assets/img/landing/landingImage3D.jpg";
@@ -14,17 +14,20 @@ import LandingImageChara from "assets/img/landing/landingImageChara.jpg";
 import LandingImageIllu from "assets/img/landing/landingImageIllu.jpg";
 import LandingImageResume from "assets/img/landing/landingImageResume.jpg";
 import LandingImageAbout from "assets/img/landing/landingImageAbout.jpg";
+import CursorText from "components/components/Hero/CursorText"
 
 const Landing = () => {
     const [heroButtonClicked, setHeroButtonClicked] = useState(false)
-    const inputEl = useRef(null);
+    const parallaxRef = useRef("parallax");
+    const cursorTextRef = useRef("cursorText")
     return(
         <Block
         overrides={{
             Block:{
                 style:{
-                    width: "100vw",
+                    width: "100%",
                     height: "100%",
+
                 }
             }
         }}
@@ -32,14 +35,12 @@ const Landing = () => {
         <Hero
         heroButtonClicked={heroButtonClicked}
         >
-            <Button
-            onClick={()=>{
+            <CursorText ref={cursorTextRef}>Click to enter</CursorText>
+            <HeroImage onClick={()=>{
                 setHeroButtonClicked(!heroButtonClicked)
-            }}
-            
-            >Enter</Button>
-            <HeroImage src={HeroBackgroundFront}></HeroImage>
-            <HeroImage ref={inputEl} src={HeroBackgroundBack}></HeroImage>
+            }} parallax src={HeroBackgroundFront}/>
+            <HeroImage transform="scale(1.1)"ref={parallaxRef} src={HeroBackgroundBack}/>
+            <Particles />
         </Hero>
         {
             heroButtonClicked ? 
