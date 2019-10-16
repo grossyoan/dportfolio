@@ -1,6 +1,7 @@
 import React, {useState, useRef} from 'react';
 import PropTypes from "prop-types"
 import {Block} from "baseui/block"
+import { Link } from "@reach/router";
 import Hero from "components/layouts/Hero"
 import HeroImage from "components/components/Hero/HeroImage"
 import HeroBackgroundFront from "assets/img/hero/Background_Character.png"
@@ -45,9 +46,11 @@ const Landing = () => {
         {
             heroButtonClicked ? 
                 <LandingWrapper>
-                    <ImageCardWrapper gridArea="1 / 17 / 33 / 33" src={LandingImage3D} imageAnimationDelay="1.1s" textAnimationDelay="1.3s"font="font900">
-                        3D
-                    </ImageCardWrapper>
+                    <Link to="/azezae">
+                        <ImageCardWrapper gridArea="1 / 17 / 33 / 33" src={LandingImage3D} imageAnimationDelay="1.1s" textAnimationDelay="1.3s"font="font900">
+                            3D
+                        </ImageCardWrapper>
+                        </Link>
                     <ImageCardWrapper gridArea="1 / 1 / 17 / 17" src={LandingImageTradi} heightAnimation imageAnimationDelay=".9s" textAnimationDelay="1.1s"font="font800">
                         Old School
                     </ImageCardWrapper>
