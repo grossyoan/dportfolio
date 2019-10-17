@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Block } from "baseui/block";
+import { Link } from "@reach/router";
 
+import categories from "../../assets/categories.json";
 import content from "../../assets/content.json";
 import CategoryGallery from "../layouts/CategoryGallery";
 import GalleryImage from "components/components/Gallery/GalleryImage.js";
@@ -12,26 +14,91 @@ const Category = ({ categoryId, children, ...props }) => {
       overrides={{
         Block: {
           style: {
-            margin: "0 auto",
             background: "black",
             position: "absolute",
-            left: "0",
-            top: "0",
             width: "100%",
-            height: "100%",
-            zIndex: "0",
             userSelect: "none"
           }
         }
       }}
     >
-      <CategoryGallery>
-        {content
-          .filter(content => content.category === categoryId)
-          .map(item => (
-            <GalleryImage src={item.src} />
-          ))}
-      </CategoryGallery>
+      <Link
+        to="/category"
+        style={{
+          color: "transparent",
+          marginTop: "40px",
+          marginLeft: "5%",
+          display: "inline-block"
+        }}
+      >
+        <p
+          style={{
+            color: "white",
+            fontFamily: "Gabriela",
+            fontSize: "28px",
+            margin: "0"
+          }}
+        >
+          Back to menu
+        </p>
+        <span
+          style={{
+            color: "white",
+            fontSize: "30px",
+            marginTop: "-100px",
+            display: "inline-block"
+          }}
+        >
+          &#10229;
+        </span>
+      </Link>
+
+      <Block
+        overrides={{
+          Block: {
+            style: { width: "70%", margin: "0 auto" }
+          }
+        }}
+      >
+        <h1
+          style={{
+            color: "white",
+            fontSize: "40px",
+            fontFamily: "Gabriela",
+            fontWeight: "normal",
+            marginBottom: "0",
+            marginTop: "60px"
+          }}
+        >
+          {
+            categories.filter(
+              categories => categories.category === categoryId
+            )[0].categoryTitle
+          }
+        </h1>
+        <p
+          style={{
+            color: "white",
+            fontSize: "28px",
+            fontFamily: "Gabriela",
+            marginTop: "20px",
+            marginBottom: "90px"
+          }}
+        >
+          {
+            categories.filter(
+              categories => categories.category === categoryId
+            )[0].categoryDescription
+          }
+        </p>
+        <CategoryGallery>
+          {content
+            .filter(content => content.category === categoryId)
+            .map(item => (
+              <GalleryImage src={item.src} />
+            ))}
+        </CategoryGallery>
+      </Block>
     </Block>
   );
 };

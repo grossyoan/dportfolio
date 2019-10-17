@@ -5,6 +5,7 @@ import { Provider as StyletronProvider } from "styletron-react";
 import { LightTheme, BaseProvider } from "baseui";
 import { Router } from "@reach/router";
 import Landing from "./components/pages/Landing";
+import Menu from "./components/pages/Menu";
 import Category from "./components/pages/Category";
 
 const engine = new Styletron();
@@ -15,6 +16,7 @@ function App() {
       <BaseProvider theme={LightTheme}>
         <Router>
           <Landing path="/" />
+          <Menu path="/category" />
           <Category path="/category/:categoryId" />
         </Router>
       </BaseProvider>
