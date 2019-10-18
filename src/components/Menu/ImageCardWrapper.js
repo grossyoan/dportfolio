@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import useHover from "helpers/useHover";
 import PropTypes from "prop-types";
 import { Block } from "baseui/block";
-import ImageCard from "components/components/ImageCard/ImageCard";
-import ImageText from "components/components/ImageCard/ImageText";
+import ImageCard from "components/Menu/ImageCard";
+import ImageText from "components/Menu/ImageText";
 const ImageCardWrapper = ({
   gridArea,
   children,

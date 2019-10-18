@@ -7,6 +7,7 @@ import { Router } from "@reach/router";
 import Landing from "./components/pages/Landing";
 import Menu from "./components/pages/Menu";
 import Category from "./components/pages/Category";
+import Project from "./components/pages/Project";
 
 const engine = new Styletron();
 
@@ -16,8 +17,9 @@ function App() {
       <BaseProvider theme={LightTheme}>
         <Router>
           <Landing path="/" />
-          <Menu path="/category" />
-          <Category path="/category/:categoryId" />
+          <Menu path="category/" />
+          <Category path="category/:categoryId/" />
+          <Project path="project/:projectId/" />
         </Router>
       </BaseProvider>
     </StyletronProvider>

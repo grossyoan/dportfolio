@@ -2,12 +2,12 @@ import React, { useState, useRef } from "react";
 import PropTypes from "prop-types";
 import { Block } from "baseui/block";
 import { Link } from "@reach/router";
-import Hero from "components/layouts/Hero";
-import HeroImage from "components/components/Hero/HeroImage";
+import Hero from "components/Hero/Hero";
+import HeroImage from "components/Hero/HeroImage";
 import HeroBackgroundFront from "assets/img/hero/Background_Character.png";
 import HeroBackgroundBack from "assets/img/hero/Background_Back.png";
-import Particles from "components/components/Hero/Particles";
-import CursorText from "components/components/Hero/CursorText";
+import Particles from "components/Hero/Particles";
+import CursorText from "components/Hero/CursorText";
 
 const Landing = () => {
   const [heroButtonClicked, setHeroButtonClicked] = useState(false);

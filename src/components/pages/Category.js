@@ -5,8 +5,8 @@ import { Link } from "@reach/router";
 
 import categories from "../../assets/categories.json";
 import content from "../../assets/content.json";
-import CategoryGallery from "../layouts/CategoryGallery";
-import GalleryImage from "components/components/Gallery/GalleryImage.js";
+import CategoryGallery from "../Gallery/CategoryGallery";
+import GalleryImage from "components/Gallery/GalleryImage.js";
 
 const Category = ({ categoryId, children, ...props }) => {
   return (
@@ -17,6 +17,7 @@ const Category = ({ categoryId, children, ...props }) => {
             background: "black",
             position: "absolute",
             width: "100%",
+            minHeight: "100vh",
             userSelect: "none"
           }
         }
@@ -95,7 +96,9 @@ const Category = ({ categoryId, children, ...props }) => {
           {content
             .filter(content => content.category === categoryId)
             .map(item => (
-              <GalleryImage src={item.src} />
+              <Link to={"/project/" + item.id}>
+                <GalleryImage src={item.src} />
+              </Link>
             ))}
         </CategoryGallery>
       </Block>

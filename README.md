@@ -20,5 +20,5 @@ npm run start
 - [ ] Go further with the overall design
 - [ ] Add animations
 - [ ] Design and dev the "About me" Page
-- [ ] Fix lateral scroll
+- [x] Fix lateral scroll
 - [ ] Responsive version

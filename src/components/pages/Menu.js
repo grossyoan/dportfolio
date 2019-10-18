@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
-import LandingWrapper from "components/layouts/LandingCardWrapper";
-import ImageCardWrapper from "components/components/ImageCard/ImageCardWrapper";
+import LandingWrapper from "components/Menu/LandingCardWrapper";
+import ImageCardWrapper from "components/Menu/ImageCardWrapper";
 import LandingImage3D from "assets/img/landing/landingImage3D.jpg";
 import LandingImageTradi from "assets/img/landing/landingImageTradi.jpg";
 import LandingImageChara from "assets/img/landing/landingImageChara.jpg";
