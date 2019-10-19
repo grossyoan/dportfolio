@@ -15,7 +15,7 @@ npm run start
 - [x] Add style to the "Gallery" page
 - [ ] Add background Handler to the Gallery page
 - [ ] Dev and add style to the "Case Study" Page
-- [ ] Add refs from gallery to case study
+- [x] Add refs from gallery to case study
 - [ ] Add content
 - [ ] Go further with the overall design
 - [ ] Add animations
