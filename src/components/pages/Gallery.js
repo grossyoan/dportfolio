@@ -5,10 +5,11 @@ import { Link } from "@reach/router";
 
 import categories from "../../assets/categories.json";
 import content from "../../assets/content.json";
-import CategoryGallery from "../Gallery/CategoryGallery";
-import GalleryImage from "components/Gallery/GalleryImage.js";
 
-const Category = ({ categoryId, children, ...props }) => {
+import CategoryGallery from "../Gallery/CategoryGallery";
+import GalleryImage from "components/Gallery/GalleryImage";
+
+const Gallery = ({ galleryId, children, ...props }) => {
   return (
     <Block
       overrides={{
@@ -24,7 +25,7 @@ const Category = ({ categoryId, children, ...props }) => {
       }}
     >
       <Link
-        to="/category"
+        to="/menu"
         style={{
           color: "transparent",
           marginTop: "40px",
@@ -53,7 +54,6 @@ const Category = ({ categoryId, children, ...props }) => {
           &#10229;
         </span>
       </Link>
-
       <Block
         overrides={{
           Block: {
@@ -72,9 +72,8 @@ const Category = ({ categoryId, children, ...props }) => {
           }}
         >
           {
-            categories.filter(
-              categories => categories.category === categoryId
-            )[0].categoryTitle
+            categories.filter(categories => categories.id === galleryId)[0]
+              .title
           }
         </h1>
         <p
@@ -87,16 +86,15 @@ const Category = ({ categoryId, children, ...props }) => {
           }}
         >
           {
-            categories.filter(
-              categories => categories.category === categoryId
-            )[0].categoryDescription
+            categories.filter(categories => categories.id === galleryId)[0]
+              .description
           }
         </p>
         <CategoryGallery>
           {content
-            .filter(content => content.category === categoryId)
+            .filter(content => content.category === galleryId)
             .map(item => (
-              <Link to={"/project/" + item.id}>
+              <Link to={"../../project/" + item.id}>
                 <GalleryImage src={item.src} />
               </Link>
             ))}
@@ -106,14 +104,14 @@ const Category = ({ categoryId, children, ...props }) => {
   );
 };
 
-Category.propTypes = {
+Gallery.propTypes = {
   children: PropTypes.object,
   heroButtonClicked: PropTypes.bool
 };
 
-Category.defaultProps = {
+Gallery.defaultProps = {
   children: {},
   heroButtonClicked: false
 };
 
-export default Category;
+export default Gallery;

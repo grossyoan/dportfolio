@@ -5,7 +5,7 @@ import { Link } from "@reach/router";
 
 import content from "../../assets/content.json";
 
-const Project = ({ projectId }) => {
+const Project = ({ projectId, ...props }) => {
   return (
     <Block
       overrides={{
@@ -22,7 +22,10 @@ const Project = ({ projectId }) => {
       }}
     >
       <Link
-        to="/category"
+        to={
+          "../../gallery/" +
+          content.filter(content => content.id === projectId)[0].category
+        }
         style={{
           color: "transparent",
           marginTop: "40px",

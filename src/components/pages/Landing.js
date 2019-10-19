@@ -24,7 +24,7 @@ const Landing = () => {
         }
       }}
     >
-      <Link to="/category" style={{}}>
+      <Link to="/menu" style={{}}>
         <Hero heroButtonClicked={heroButtonClicked}>
           <CursorText ref={cursorTextRef}>Click to enter</CursorText>
           <HeroImage
