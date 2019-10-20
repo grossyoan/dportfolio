@@ -4,7 +4,8 @@ import { styled } from "baseui";
 
 const StyledCursor = styled("h3", ({ ref, ...props }) => ({
   position: "absolute",
-  color: "white "
+  color: "white ",
+  fontSize: ".7em"
 }));
 
 const CursorText = forwardRef(({ children, ...props }, ref) => {

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Block } from "baseui/block";
 import { Link } from "@reach/router";
+import { StyledLink } from "baseui/link";
 
 import categories from "../../assets/categories.json";
 import content from "../../assets/content.json";
@@ -42,22 +43,14 @@ const Category = ({ categoryId, children, ...props }) => {
           style={{
             color: "white",
             fontFamily: "Merienda",
-            fontSize: "1em",
-            margin: "0"
+            fontSize: ".7em",
+            margin: "0",
+            lineHeight: "1em"
           }}
         >
-          Back to categories
-        </p>
-        <span
-          style={{
-            color: "white",
-            fontSize: "1.1em",
-            marginTop: "-100px",
-            display: "inline-block"
-          }}
-        >
+          Back to categories <br />
           &#10229;
-        </span>
+        </p>
       </Link>
       <Block
         overrides={{
@@ -83,10 +76,10 @@ const Category = ({ categoryId, children, ...props }) => {
         <p
           style={{
             color: "white",
-            fontSize: "1em",
+            fontSize: ".8em",
             fontFamily: "Gabriela",
             marginTop: "20px",
-            marginBottom: "50px"
+            marginBottom: "5%"
           }}
         >
           {
@@ -120,6 +113,42 @@ const Category = ({ categoryId, children, ...props }) => {
         </CategoryGallery>
       </Block>
       <SocialMedias />
+      <Block
+        overrides={{
+          Block: {
+            style: {
+              position: "absolute",
+              right: "50px",
+              top: "40px",
+              fontFamily: "Cookie",
+              color: "white",
+              fontSize: "1em"
+            }
+          }
+        }}
+      >
+        D.O
+      </Block>
+      <Block
+        overrides={{
+          Block: {
+            style: {
+              position: "absolute",
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+              right: "0",
+              bottom: "2%",
+              fonSize: "inherit",
+              fontSize: ".4em"
+            }
+          }
+        }}
+      >
+        <StyledLink href="https://grossyoan.fr">
+          Developed with ❤️by Yoan Gross
+        </StyledLink>
+      </Block>
     </Block>
   );
 };

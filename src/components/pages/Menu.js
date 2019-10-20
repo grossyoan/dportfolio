@@ -24,7 +24,7 @@ const Menu = () => {
           src={LandingImage3D}
           imageAnimationDelay="1.1s"
           textAnimationDelay="1.3s"
-          font="font900"
+          font="1em"
         >
           3D
         </ImageCardWrapper>

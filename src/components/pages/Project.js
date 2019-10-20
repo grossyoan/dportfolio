@@ -1,6 +1,7 @@
 import React from "react";
 import { Block } from "baseui/block";
 import { Link } from "@reach/router";
+import { StyledLink } from "baseui/link";
 
 import content from "../../assets/content.json";
 import SocialMedias from "../SocialMedias";
@@ -37,22 +38,14 @@ const Project = ({ projectId, ...props }) => {
           style={{
             color: "white",
             fontFamily: "Merienda",
-            fontSize: "1em",
-            margin: "0"
+            fontSize: ".7em",
+            margin: "0",
+            lineHeight: "1em"
           }}
         >
-          Back to gallery
-        </p>
-        <span
-          style={{
-            color: "white",
-            fontSize: "1.1em",
-            marginTop: "-100px",
-            display: "inline-block"
-          }}
-        >
+          Back to gallery <br />
           &#10229;
-        </span>
+        </p>
       </Link>
       <Block>
         {content
@@ -119,47 +112,38 @@ const Project = ({ projectId, ...props }) => {
                         "@media screen and (max-width: 880px)": {
                           marginTop: "2%",
                           width: "100%"
-                        }
+                        },
+                        opacity: "0.9",
+                        fontSize: ".7em",
+                        color: "white"
                       }
                     }
                   }}
                 >
                   <p
                     style={{
-                      color: "white",
-                      fontSize: "1em",
-                      margin: "0",
-                      opacity: "0.6"
+                      margin: "0"
                     }}
                   >
                     Technique: {item.technique}
                   </p>
                   <p
                     style={{
-                      color: "white",
-                      fontSize: "1em",
-                      margin: "0",
-                      opacity: "0.6"
+                      margin: "0"
                     }}
                   >
                     Date: {item.date}
                   </p>
                   <p
                     style={{
-                      color: "white",
-                      fontSize: "1em",
-                      margin: "0",
-                      opacity: "0.6"
+                      margin: "0"
                     }}
                   >
                     Type: {item.type}
                   </p>
                   <p
                     style={{
-                      color: "white",
-                      fontSize: "1em",
-                      marginTop: "20px",
-                      opacity: "0.6"
+                      marginTop: "20px"
                     }}
                   >
                     {item.description}
@@ -170,6 +154,44 @@ const Project = ({ projectId, ...props }) => {
           ))}
       </Block>
       <SocialMedias />
+      <Link to="/">
+        <Block
+          overrides={{
+            Block: {
+              style: {
+                position: "absolute",
+                right: "50px",
+                top: "40px",
+                fontFamily: "Cookie",
+                color: "white",
+                fontSize: "1em"
+              }
+            }
+          }}
+        >
+          D.O
+        </Block>
+      </Link>
+      <Block
+        overrides={{
+          Block: {
+            style: {
+              position: "absolute",
+              display: "flex",
+              justifyContent: "center",
+              width: "100%",
+              right: "0",
+              bottom: "2%",
+              fonSize: "inherit",
+              fontSize: ".4em"
+            }
+          }
+        }}
+      >
+        <StyledLink href="https://grossyoan.fr">
+          Developed with ❤️by Yoan Gross
+        </StyledLink>
+      </Block>
     </Block>
   );
 };
