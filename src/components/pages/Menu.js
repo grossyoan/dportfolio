@@ -13,8 +13,8 @@ const Menu = () => {
   return (
     <LandingWrapper>
       <Link
-        to="../gallery/3d"
-        galleryId="3d"
+        to="../category/3d"
+        categoryId="3d"
         style={{
           display: "contents"
         }}

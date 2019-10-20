@@ -2,6 +2,9 @@
   text-align: center;
   background: "black";
 }
+html {
+  font-size: calc(1em + 1vw) !important;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;

@@ -10,7 +10,8 @@ const CategoryGallery = ({ children, heroButtonClicked, ...props }) => {
           style: {
             display: "flex",
             flexWrap: "wrap",
-            padding: "4px 4px"
+            padding: "4px 4px",
+            marginBottom: "100px"
           }
         }
       }}

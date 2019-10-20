@@ -5,11 +5,15 @@ import { Link } from "@reach/router";
 
 import categories from "../../assets/categories.json";
 import content from "../../assets/content.json";
+import SocialMedias from "../SocialMedias";
 
-import CategoryGallery from "../Gallery/CategoryGallery";
-import GalleryImage from "components/Gallery/GalleryImage";
+import CategoryGallery from "../Category/CategoryGallery";
+import GalleryImage from "components/Category/GalleryImage";
 
-const Gallery = ({ galleryId, children, ...props }) => {
+const Category = ({ categoryId, children, ...props }) => {
+  let customBackground = categories.filter(
+    categories => categories.id === categoryId
+  )[0].background;
   return (
     <Block
       overrides={{
@@ -19,7 +23,8 @@ const Gallery = ({ galleryId, children, ...props }) => {
             position: "absolute",
             width: "100%",
             minHeight: "100vh",
-            userSelect: "none"
+            userSelect: "none",
+            backgroundImage: `url(${customBackground})`
           }
         }
       }}
@@ -36,17 +41,17 @@ const Gallery = ({ galleryId, children, ...props }) => {
         <p
           style={{
             color: "white",
-            fontFamily: "Gabriela",
-            fontSize: "28px",
+            fontFamily: "Merienda",
+            fontSize: "1em",
             margin: "0"
           }}
         >
-          Back to menu
+          Back to categories
         </p>
         <span
           style={{
             color: "white",
-            fontSize: "30px",
+            fontSize: "1.1em",
             marginTop: "-100px",
             display: "inline-block"
           }}
@@ -64,54 +69,69 @@ const Gallery = ({ galleryId, children, ...props }) => {
         <h1
           style={{
             color: "white",
-            fontSize: "40px",
-            fontFamily: "Gabriela",
+            fontSize: "1.4em",
+            fontFamily: "Merienda",
             fontWeight: "normal",
-            marginBottom: "0",
-            marginTop: "60px"
+            marginBottom: "0"
           }}
         >
           {
-            categories.filter(categories => categories.id === galleryId)[0]
+            categories.filter(categories => categories.id === categoryId)[0]
               .title
           }
         </h1>
         <p
           style={{
             color: "white",
-            fontSize: "28px",
+            fontSize: "1em",
             fontFamily: "Gabriela",
             marginTop: "20px",
-            marginBottom: "90px"
+            marginBottom: "50px"
           }}
         >
           {
-            categories.filter(categories => categories.id === galleryId)[0]
+            categories.filter(categories => categories.id === categoryId)[0]
               .description
           }
         </p>
         <CategoryGallery>
           {content
-            .filter(content => content.category === galleryId)
+            .filter(content => content.category === categoryId)
             .map(item => (
               <Link to={"../../project/" + item.id}>
-                <GalleryImage src={item.src} />
+                <Block
+                  overrides={{
+                    Block: {
+                      style: {
+                        width: "350px",
+                        padding: "4px 4px",
+
+                        "@media screen and (max-width: 880px)": {
+                          width: "100%"
+                        }
+                      }
+                    }
+                  }}
+                >
+                  <GalleryImage src={item.src} />
+                </Block>
               </Link>
             ))}
         </CategoryGallery>
       </Block>
+      <SocialMedias />
     </Block>
   );
 };
 
-Gallery.propTypes = {
+Category.propTypes = {
   children: PropTypes.object,
   heroButtonClicked: PropTypes.bool
 };
 
-Gallery.defaultProps = {
+Category.defaultProps = {
   children: {},
   heroButtonClicked: false
 };
 
-export default Gallery;
+export default Category;

@@ -5,8 +5,9 @@
     "src": "http://lorempixel.com/400/200/",
     "title": "Lonely Man",
     "date": "October 2019",
-    "specifications": "Oil Painting",
-    "description": "It was more than an artpiece. It litterally changed my life, and the way I live."
+    "type": "Personal project",
+    "technique": "Oil Painting",
+    "description": "What I tried to express with the painting was the fact that time goes by but feelings don’t, if you’re with the right person."
   },
   {
     "category": "3d",

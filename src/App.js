@@ -3,10 +3,11 @@ import "./App.css";
 import { Client as Styletron } from "styletron-engine-atomic";
 import { Provider as StyletronProvider } from "styletron-react";
 import { LightTheme, BaseProvider } from "baseui";
+import customThemes from "./theme/customTheme";
 import { Router } from "@reach/router";
 import Landing from "./components/pages/Landing";
 import Menu from "./components/pages/Menu";
-import Gallery from "./components/pages/Gallery";
+import Category from "./components/pages/Category";
 import Project from "./components/pages/Project";
 
 const engine = new Styletron();
@@ -14,11 +15,11 @@ const engine = new Styletron();
 function App() {
   return (
     <StyletronProvider value={engine}>
-      <BaseProvider theme={LightTheme}>
+      <BaseProvider theme={customThemes}>
         <Router>
           <Landing path="/" />
           <Menu path="/menu" />
-          <Gallery path="gallery/:galleryId" />
+          <Category path="category/:categoryId" />
           <Project path="project/:projectId" />
         </Router>
       </BaseProvider>
