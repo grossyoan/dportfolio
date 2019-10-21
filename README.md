@@ -17,6 +17,7 @@ npm run start
 - [x] Dev and add style to the "Case Study" Page
 - [x] Add D.O logo
 - [x] Add refs from gallery to case study
+- [ ] Add video support 
 - [ ] Add project secondary images handler
 - [ ] Add content
 - [ ] Add animations
