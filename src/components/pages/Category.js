@@ -106,7 +106,11 @@ const Category = ({ categoryId, children, ...props }) => {
                     }
                   }}
                 >
-                  <GalleryImage src={item.src} />
+                  {item.isVideo ? (
+                    <GalleryImage src={item.thumbnail} />
+                  ) : (
+                    <GalleryImage src={item.src} />
+                  )}
                 </Block>
               </Link>
             ))}

@@ -2,6 +2,8 @@
   {
     "category": "3d",
     "id": "lonelyman",
+    "isVideo": false,
+    "thumbnail": false,
     "src": "https://picsum.photos/400/200",
     "title": "Lonely Man",
     "date": "October 2019",
@@ -11,11 +13,13 @@
   },
   {
     "category": "3d",
-    "id": "1",
-    "src": "https://picsum.photos/400/200",
+    "id": "dreamguy",
+    "isVideo": true,
+    "thumbnail": "https://picsum.photos/400/200",
+    "src": "2019.m4v",
     "title": "Dreaming Guy",
-    "date": "October 2019",
-    "specifications": "Oil Painting",
+    "date": "September 2019",
+    "technique": "Oil Painting",
     "description": "It was more than an artpiece. It litterally changed my life, and the way I live."
   },
   {

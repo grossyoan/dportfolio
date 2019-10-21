@@ -3,6 +3,7 @@ import { Block } from "baseui/block";
 import { Link } from "@reach/router";
 import { StyledLink } from "baseui/link";
 
+import importVideos from "../../helpers/importVideos";
 import content from "../../assets/content.json";
 import SocialMedias from "../SocialMedias";
 
@@ -97,11 +98,22 @@ const Project = ({ projectId, ...props }) => {
                     }
                   }}
                 >
-                  <img
-                    src={item.src}
-                    alt=""
-                    style={{ width: "100%", height: "auto" }}
-                  />
+                  {item.isVideo ? (
+                    <video
+                      style={{ width: "100%", height: "auto" }}
+                      preload="auto"
+                      autoPlay="true"
+                      controls
+                      loop
+                      src={importVideos(item.src)}
+                    ></video>
+                  ) : (
+                    <img
+                      src={item.src}
+                      alt=""
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                  )}
                 </Block>
                 <Block
                   overrides={{

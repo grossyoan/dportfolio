@@ -24,8 +24,8 @@ npm run start
 - [ ] Design and dev the "About me" Page
 - [ ] Finish hero + responsive version
 - [x] Fix lateral scroll
-- [ ] Fix loading from local issue
+- [x] Fix loading from local issue
 - [ ] Fix htaccess issue
 - [x] Responsive version (Still has little issues)
 - [ ] Add favicon
-- [ ] Change logo for custom's one 
+- [ ] Change logo for custom's one
