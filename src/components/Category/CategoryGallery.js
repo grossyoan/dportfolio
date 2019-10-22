@@ -1,32 +1,27 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Block } from "baseui/block";
+import React from "react"
+import PropTypes from "prop-types"
 
 const CategoryGallery = ({ children, heroButtonClicked, ...props }) => {
   return (
-    <Block
-      overrides={{
-        Block: {
-          style: {
-            display: "flex",
-            flexWrap: "wrap",
-            padding: "4px 4px",
-            marginBottom: "100px"
-          }
-        }
+    <div
+      style={{
+        display: "flex",
+        flexWrap: "wrap",
+        padding: "4px 4px",
+        marginBottom: "100px",
       }}
     >
       {children}
-    </Block>
-  );
-};
+    </div>
+  )
+}
 
 CategoryGallery.propTypes = {
-  children: PropTypes.object
-};
+  children: PropTypes.object,
+}
 
 CategoryGallery.defaultProps = {
-  children: {}
-};
+  children: {},
+}
 
-export default CategoryGallery;
+export default CategoryGallery

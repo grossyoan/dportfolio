@@ -1,21 +1,13 @@
-import * as React from 'react';
-import {StyledLink} from 'baseui/link';
-import {Block} from 'baseui/block';
+import * as React from "react"
 
-export default ({href, children, ...props}) => (
-  <Block font="font450"
-  overrides={{
-      Block:{
-          style:{
-              position: "absolute",
-              right: "5%",
-              bottom: "5%",
-          }
-      }
-  }}
+export default ({ href, children, ...props }) => (
+  <a
+    href={href}
+    style={{
+      color: "white",
+      textDecoration: "none",
+    }}
   >
-    <StyledLink href={href} {...props}>
-      {children}
-    </StyledLink>
-  </Block>
-);
+    {children}
+  </a>
+)
