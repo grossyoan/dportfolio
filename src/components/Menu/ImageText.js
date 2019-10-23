@@ -1,16 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Block } from "baseui/block";
-import customTheme from "theme/customTheme";
-const ImageText = ({ children, font, animationDelay, ...props }) => {
+import React from "react"
+import PropTypes from "prop-types"
+import { Block } from "baseui/block"
+const ImageText = ({ children, font, animationdelay, ...props }) => {
   return (
     <Block
       overrides={{
         Block: {
           style: {
-            ":before": {
-              content: "3D"
-            },
             textAlign: "center",
             position: "absolute",
             zIndex: "50",
@@ -19,9 +15,9 @@ const ImageText = ({ children, font, animationDelay, ...props }) => {
             left: "50%",
             color: "white",
             transform: "translate(-50%, -50%)",
-            fontFamily: customTheme.typography.font600.fontFamily,
+            fontFamily: "Gabriela",
             animationDuration: "1.5s",
-            animationDelay: animationDelay,
+            animationDelay: animationdelay,
             animationFillMode: "forwards",
             animationTimingFunction: "ease",
             opacity: "0",
@@ -29,27 +25,27 @@ const ImageText = ({ children, font, animationDelay, ...props }) => {
             userSelect: "none",
             animationName: {
               from: {
-                opacity: "0"
+                opacity: "0",
               },
               to: {
-                opacity: "1"
-              }
-            }
-          }
-        }
+                opacity: "1",
+              },
+            },
+          },
+        },
       }}
     >
       {children}
     </Block>
-  );
-};
+  )
+}
 
 ImageText.propTypes = {
-  children: PropTypes.string
-};
+  children: PropTypes.string,
+}
 
 ImageText.defaultProps = {
-  children: "Sample Text"
-};
+  children: "Sample Text",
+}
 
-export default ImageText;
+export default ImageText

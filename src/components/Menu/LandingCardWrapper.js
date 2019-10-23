@@ -1,41 +1,36 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Block } from "baseui/block";
+import React from "react"
+import PropTypes from "prop-types"
 
 const LandingWrapper = ({ children, ...props }) => {
   return (
-    <Block
-      overrides={{
-        Block: {
-          style: {
-            display: "grid",
-            position: "absolute",
-            left: "0",
-            top: "0",
-            width: "100%",
-            height: "100%",
-            zIndex: "-1",
-            flexDirection: "row",
-            "@media screen and (max-width: 880px)": {
-              display: "flex",
-              flexWrap: "wrap"
-            }
-          }
-        }
+    <div
+      style={{
+        display: "grid",
+        position: "absolute",
+        left: "0",
+        top: "0",
+        width: "100%",
+        height: "100%",
+        zIndex: "-1",
+        flexDirection: "row",
+        "@media screen and (max-width: 880px)": {
+          display: "flex",
+          flexWrap: "wrap",
+        },
       }}
       {...props}
     >
       {children}
-    </Block>
-  );
-};
+    </div>
+  )
+}
 
 LandingWrapper.propTypes = {
-  children: PropTypes.object
-};
+  children: PropTypes.node,
+}
 
 LandingWrapper.defaultProps = {
-  children: {}
-};
+  children: {},
+}
 
-export default LandingWrapper;
+export default LandingWrapper

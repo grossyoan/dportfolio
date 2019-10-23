@@ -1,38 +1,29 @@
-import * as React from "react";
-import { Block } from "baseui/block";
-import { StyledLink } from "baseui/link";
-
+import * as React from "react"
+import { StyledLink } from "baseui/link"
+import Link from "./Link"
 export default ({ href, children, ...props }) => (
-  <Block
-    overrides={{
-      Block: {
-        style: {
-          position: "absolute",
-          bottom: "6%",
-          width: "100vw",
-          display: "flex",
-          justifyContent: "center",
-          fontSize: ".6em",
-          flexWrap: "wrap"
-        }
-      }
+  <div
+    style={{
+      position: "absolute",
+      bottom: "6%",
+      width: "100vw",
+      display: "flex",
+      justifyContent: "center",
+      fontSize: ".6em",
+      flexWrap: "wrap",
     }}
   >
-    <Block overrides={{ Block: { style: { margin: "0px 3% 0px 0px" } } }}>
-      <StyledLink href="https://www.instagram.com/doriane_o/?hl=fr">
-        Instagram
-      </StyledLink>
-    </Block>
-    <Block overrides={{ Block: { style: { margin: "0px 3%" } } }}>
-      <StyledLink href="https://www.arstation.com">Artstation</StyledLink>
-    </Block>
-    <Block overrides={{ Block: { style: { margin: "0px 3%" } } }}>
-      <StyledLink href="https://www.malt.fr/profile/dorianeolivier">
-        Malt
-      </StyledLink>
-    </Block>
-    <Block overrides={{ Block: { style: { margin: "0px 3%" } } }}>
-      <StyledLink href="mailto:doriane.olivier@gmail.com">E-Mail</StyledLink>
-    </Block>
-  </Block>
-);
+    <div style={{ margin: "0px 3% 0px 0px" }}>
+      <Link href="https://www.instagram.com/doriane_o/?hl=fr">Instagram</Link>
+    </div>
+    <div style={{ margin: "0px 3%" }}>
+      <Link href="https://www.arstation.com">Artstation</Link>
+    </div>
+    <div style={{ margin: "0px 3%" }}>
+      <Link href="https://www.malt.fr/profile/dorianeolivier">Malt</Link>
+    </div>
+    <div style={{ margin: "0px 3%" }}>
+      <Link href="mailto:doriane.olivier@gmail.com">E-Mail</Link>
+    </div>
+  </div>
+)

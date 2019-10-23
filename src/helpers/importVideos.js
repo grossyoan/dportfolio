@@ -1,1 +1,1 @@
-export default path => require(`../assets/videos/${path}`);
+export default path => `../../videos/${path}`
