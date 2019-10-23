@@ -11,8 +11,8 @@ import { BaseProvider } from "baseui"
 import { Router } from "@reach/router"
 import customTheme from "../theme/customTheme"
 
-import Category from "../pages/category"
-import Project from "../pages/project"
+import Category from "../templates/category"
+import Project from "../templates/project"
 
 import "./layout.css"
 

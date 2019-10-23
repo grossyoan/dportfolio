@@ -33,5 +33,5 @@ gatsby develop
 
 ### SSR
 
-- [ ] Fix bugs to have a proper build
+- [x] Fix bugs to have a proper build
 - [ ] Add meta informations
