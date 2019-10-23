@@ -30,6 +30,7 @@ gatsby develop
 - [ ] Finish hero + responsive version
 - [ ] Add favicon
 - [ ] Change logo for custom's one
+- [ ] Add CMS
 
 ### SSR
 
