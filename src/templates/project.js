@@ -3,8 +3,8 @@ import { Link } from "gatsby"
 import { StyledLink } from "baseui/link"
 import { Block } from "baseui/block"
 import importVideos from "../helpers/importVideos"
-import content from "../assets/content.json"
-import categories from "../assets/categories.json"
+import content from "../../static/content.json"
+import categories from "../../static/categories.json"
 
 import SocialMedias from "../components/SocialMedias"
 

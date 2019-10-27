@@ -6,8 +6,8 @@
 
 // You can delete this file if you're not using it
 const path = require("path")
-const categories = require("./src/assets/categories.json")
-const content = require("./src/assets/content.json")
+const categories = require("./static/categories.json")
+const content = require("./static/content.json")
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
