@@ -17,9 +17,30 @@ collections:
     editor:
       preview: false
     fields: # The fields for each document, usually in front matter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - {
+          label: "Catégorie",
+          name: "category",
+          widget: "string",
+          default: "3D",
+        }
+      - { label: "Titre", name: "title", widget: "string", default: "Lonely Man",
+ }
+      - { label: "ID", name: "id", widget: "string", default: "lonelyman" }
+      - { label: "Vidéo ?", name: "isVideo", widget: "boolean", default: false }
+      - {
+          label: "Thumbnail Vidéo (Seulement si c'est un projet vidéo)",
+          name: "thumbnail",
+          widget: "file",
+          default: null,
+          required: false
+        }
+      - { label: "Image du projet", name: "src", widget: "file", default: null }
+      - {label: 'Date de création',
+      name: 'date',
+      widget: 'date',
+      default: '',
+      format: 'Do MMM YY'
+      }
+      - { label: "Type de projet", name: "type", widget: "string", default: "Personal project"}
+      - { label: "Techniques utilisées", name: "technique", widget: "string", default: "Oil Painting"}
+      - { label: "Description", name: "description", widget: "text", default: "What I tried to express with the painting was the fact that time goes by but feelings don’t, if you’re with the right person."}
