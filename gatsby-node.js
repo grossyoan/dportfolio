@@ -8,22 +8,22 @@
 const path = require("path")
 const fs = require("fs")
 const categories = require("./static/categories.json")
-const content = require("./static/content.json")
 
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage } = actions
   if (page.path === "/category/" || page.path === "/project/") return
 
-  // const basePath = path.resolve("./contents")
-  // const allFiles = fs.readdirSync(basePath)
+  const basePath = path.resolve("./contents")
+  const allFiles = fs.readdirSync(basePath)
 
-  // const contents = []
-  // allFiles.forEach(file => {
-  //   const content = fs.readFileSync(basePath + "/" + file, { encoding: "utf8" })
-  //   contents.push(JSON.parse(content))
-  // })
+  const contents = []
+  allFiles.forEach(file => {
+  const content = fs.readFileSync(basePath + "/" + file, { encoding: "utf8" })
+  contents.push(JSON.parse(content))
+  })
   const categoriess = Object.keys(categories)
-  const contents = Object.keys(content)
+  const content = require("./static/content.json")
+
   categoriess.forEach(category => {
     createPage({
       path: `/category/${category}`,
@@ -31,18 +31,16 @@ exports.onCreatePage = async ({ page, actions }) => {
       context: {
         id: category,
       },
-    })
-    content[category].forEach(({ id }) => {
+    }),
+    content.filter(content => content.id === category).map(item => (
       createPage({
         path: `/project/${id}`,
         component: path.resolve("./src/templates/project.js"),
         context: {
           category: category,
-          id: id,
+          id: item.id,
         },
       })
-    })
-  })
-
+    ))
   createPage(page)
-}
+}}
