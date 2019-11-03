@@ -18,11 +18,13 @@ exports.onCreatePage = async ({ page, actions }) => {
 
   const contents = []
   allFiles.forEach(file => {
-  const content = fs.readFileSync(basePath + "/" + file, { encoding: "utf8" })
-  contents.push(JSON.parse(content))
+    const content = fs.readFileSync(basePath + "/" + file, { encoding: "utf8" })
+    contents.push(JSON.parse(content))
   })
+  console.log("=>>>>> Contents", contents)
+  fs.writeFile("content.json", contents)
+
   const categoriess = Object.keys(categories)
-  const content = require("./static/content.json")
 
   categoriess.forEach(category => {
     createPage({
@@ -32,15 +34,18 @@ exports.onCreatePage = async ({ page, actions }) => {
         id: category,
       },
     }),
-    content.filter(content => content.id === category).map(item => (
-      createPage({
-        path: `/project/${id}`,
-        component: path.resolve("./src/templates/project.js"),
-        context: {
-          category: category,
-          id: item.id,
-        },
-      })
-    ))
-  createPage(page)
-}}
+      content
+        .filter(content => content.id === category)
+        .map(item =>
+          createPage({
+            path: `/project/${id}`,
+            component: path.resolve("./src/templates/project.js"),
+            context: {
+              category: category,
+              id: item.id,
+            },
+          })
+        )
+    createPage(page)
+  })
+}
