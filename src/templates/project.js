@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import { StyledLink } from "baseui/link"
 import { Block } from "baseui/block"
 import importVideos from "../helpers/importVideos"
-import content from "../../static/content.json"
 import categories from "../../static/categories.json"
 
 import SocialMedias from "../components/SocialMedias"
@@ -12,7 +11,6 @@ import importImages from "../helpers/importImages"
 
 const Project = ({ pageContext, ...props }) => {
   const content = pageContext.item
-
   return (
     <div
       style={{
@@ -23,7 +21,7 @@ const Project = ({ pageContext, ...props }) => {
         zIndex: "5",
         backgroundSize: "cover",
         backgroundImage: `url("${importImages(
-          categories[content.category][0].background
+          categories[content.category.toLowerCase()][0].background
         )}"`,
       }}
     >

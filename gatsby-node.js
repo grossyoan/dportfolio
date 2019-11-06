@@ -34,25 +34,19 @@ exports.onCreatePage = async ({ page, actions }) => {
         ),
       },
     }),
-      console.log(
-        "=>>>>TESt",
-        contents.filter(
-          contents => contents.category.toLowerCase() === category
+      contents
+        .filter(contents => contents.category.toLowerCase() === category)
+        .map(item =>
+          createPage({
+            path: `/project/${item.id}`,
+            component: path.resolve("./src/templates/project.js"),
+            context: {
+              category: category,
+              id: item.id,
+              item: item,
+            },
+          })
         )
-      )
-    contents
-      .filter(contents => contents.category.toLowerCase() === category)
-      .map(item =>
-        createPage({
-          path: `/project/${item.id}`,
-          component: path.resolve("./src/templates/project.js"),
-          context: {
-            category: category,
-            id: item.id,
-            item: item,
-          },
-        })
-      )
     createPage(page)
   })
 }
