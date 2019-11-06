@@ -21,9 +21,6 @@ exports.onCreatePage = async ({ page, actions }) => {
     const content = fs.readFileSync(basePath + "/" + file, { encoding: "utf8" })
     contents.push(JSON.parse(content))
   })
-  console.log("=>>>>> Contents", contents)
-  fs.writeFile("content.json", contents)
-
   const categoriess = Object.keys(categories)
 
   categoriess.forEach(category => {
@@ -32,20 +29,30 @@ exports.onCreatePage = async ({ page, actions }) => {
       component: path.resolve("./src/templates/category.js"),
       context: {
         id: category,
+        item: contents.filter(
+          contents => contents.category.toLowerCase() === category
+        ),
       },
     }),
-      content
-        .filter(content => content.id === category)
-        .map(item =>
-          createPage({
-            path: `/project/${id}`,
-            component: path.resolve("./src/templates/project.js"),
-            context: {
-              category: category,
-              id: item.id,
-            },
-          })
+      console.log(
+        "=>>>>TESt",
+        contents.filter(
+          contents => contents.category.toLowerCase() === category
         )
+      )
+    contents
+      .filter(contents => contents.category.toLowerCase() === category)
+      .map(item =>
+        createPage({
+          path: `/project/${item.id}`,
+          component: path.resolve("./src/templates/project.js"),
+          context: {
+            category: category,
+            id: item.id,
+            item: item,
+          },
+        })
+      )
     createPage(page)
   })
 }

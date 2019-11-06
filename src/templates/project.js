@@ -11,11 +11,8 @@ import SocialMedias from "../components/SocialMedias"
 import importImages from "../helpers/importImages"
 
 const Project = ({ pageContext, ...props }) => {
-  const projectid = pageContext.id
-  const categoryid = pageContext.category
-  const contentArray = content[categoryid].filter(
-    content => content.id === projectid
-  )[0]
+  const content = pageContext.item
+
   return (
     <div
       style={{
@@ -26,12 +23,12 @@ const Project = ({ pageContext, ...props }) => {
         zIndex: "5",
         backgroundSize: "cover",
         backgroundImage: `url("${importImages(
-          categories[categoryid][0].background
+          categories[content.category][0].background
         )}"`,
       }}
     >
       <Link
-        to={"../../category/" + contentArray.category}
+        to={"../../category/" + content.category.toLowerCase()}
         style={{
           color: "transparent",
           marginTop: "40px",
@@ -66,7 +63,7 @@ const Project = ({ pageContext, ...props }) => {
               fontSize: "1.4em",
             }}
           >
-            {contentArray.title}
+            {content.title}
           </h1>
           <Block
             overrides={{
@@ -95,18 +92,18 @@ const Project = ({ pageContext, ...props }) => {
                 },
               }}
             >
-              {contentArray.isVideo ? (
+              {content.isVideo ? (
                 <video
                   style={{ width: "100%", height: "auto" }}
                   preload="auto"
                   autoPlay="true"
                   controls
                   loop
-                  src={importVideos(contentArray.src)}
+                  src={importVideos(content.src)}
                 ></video>
               ) : (
                 <img
-                  src={contentArray.src}
+                  src={content.src}
                   alt=""
                   style={{ width: "100%", height: "auto" }}
                 />
@@ -134,28 +131,28 @@ const Project = ({ pageContext, ...props }) => {
                   margin: "0",
                 }}
               >
-                Technique: {contentArray.technique}
+                Technique: {content.technique}
               </p>
               <p
                 style={{
                   margin: "0",
                 }}
               >
-                Date: {contentArray.date}
+                Date: {content.date}
               </p>
               <p
                 style={{
                   margin: "0",
                 }}
               >
-                Type: {contentArray.type}
+                Type: {content.type}
               </p>
               <p
                 style={{
                   marginTop: "20px",
                 }}
               >
-                {contentArray.description}
+                {content.description}
               </p>
             </Block>
           </Block>

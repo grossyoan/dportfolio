@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import { StyledLink } from "baseui/link"
 import { Block } from "baseui/block"
 import categories from "../../static/categories.json"
-import content from "../../static/content.json"
 import SocialMedias from "../components/SocialMedias"
 
 import CategoryGallery from "../components/Category/CategoryGallery"
@@ -14,6 +13,7 @@ import importImages from "../helpers/importImages"
 
 const Category = ({ children, pageContext, ...props }) => {
   const categoryid = pageContext.id
+  const content = pageContext.item
   return (
     <div
       style={{
@@ -78,7 +78,7 @@ const Category = ({ children, pageContext, ...props }) => {
           {categories[categoryid][0].description}
         </p>
         <CategoryGallery>
-          {content[categoryid].map(item => (
+          {content.map(item => (
             <Link to={"../../project/" + item.id}>
               <Block
                 overrides={{
