@@ -14,7 +14,7 @@ collections:
     folder: "contents" # The path to the folder where the documents are stored
     format: "json"
     create: true # Allow users to create new documents in this collection
-    slug: "{{category}}-{{title}}.json" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{category}}-{{title}}" # Filename template, e.g., YYYY-MM-DD-title.md
     preview_path: "project/{{title}}"
     # editor:
     #   preview: false
