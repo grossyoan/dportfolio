@@ -24,6 +24,7 @@ gatsby develop
 - [x] Responsive version (Still has issues)
 - [x] Add CMS
 - [x] Add responsive and adaptable display for images and videos
+- [x] Add support for all categories
 - [ ] Harmonize styling methods (Baseweb, styletron, css-inline)
 - [ ] Add project secondary images handler
 - [ ] Add all content
