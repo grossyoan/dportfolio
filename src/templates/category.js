@@ -79,7 +79,11 @@ const Category = ({ children, pageContext, ...props }) => {
         </p>
         <CategoryGallery>
           {content.map(item => (
-            <Link to={"../../project/" + item.id}>
+            <Link
+              to={
+                "../../project/" + item.title.toLowerCase().replace(/ /g, "-")
+              }
+            >
               <Block
                 overrides={{
                   Block: {

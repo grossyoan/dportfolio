@@ -4,7 +4,8 @@ backend:
 # This line should *not* be indented
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
-# publish_mode: editorial_workflow
+publish_mode: editorial_workflow
+site_url: https://dorianeolivier.fr
 
 collections:
   - name: "project" # Used in routes, e.g., /admin/collections/blog
@@ -15,33 +16,32 @@ collections:
     format: "json"
     create: true # Allow users to create new documents in this collection
     slug: "content.json" # Filename template, e.g., YYYY-MM-DD-title.md
-    editor:
-      preview: false
+    preview_path: "project/{{title}}"
+    # editor:
+    #   preview: false
     fields: # The fields for each document, usually in front matter
+      - { label: "Catégorie",
+        name: "category",
+        widget: "select",
+        options: ["3d", "oldschool", "charadesign", "illustration"],
+        hint: "La catégorie de ton projet."
+      }
+      - { label: "Titre", name: "title", widget: "string", hint: "Le titre de ton projet."}
+      - { label: "Vidéo ?", name: "isVideo", widget: "boolean", default: false, hint: "Ton projet est une vidéo ? Sélectionne moi."}
       - {
-          label: "Catégorie",
-          name: "category",
-          widget: "string",
-          default: "3D",
-        }
-      - { label: "Titre", name: "title", widget: "string", default: "Lonely Man",
- }
-      - { label: "ID", name: "id", widget: "string", default: "lonelyman" }
-      - { label: "Vidéo ?", name: "isVideo", widget: "boolean", default: false }
-      - {
-          label: "Thumbnail Vidéo (Seulement si c'est un projet vidéo)",
+          label: "Thumbnail Vidéo",
           name: "thumbnail",
           widget: "file",
           default: null,
-          required: false
+          required: false,
+          hint: "La thumbnail de ton projet vidéo qui sera affiché dans la catégorie correspondante (seulement si ton projet est une vidéo)."
         }
-      - { label: "Image du projet", name: "src", widget: "file", default: null }
-      - {label: 'Date de création',
+      - { label: "Image/Vidéo du projet", name: "src", widget: "file", default: null, hint: "L'image correspondant à ton projet." }
+      - {label: 'Date du projet',
       name: 'date',
-      widget: 'date',
-      default: '',
-      format: 'Do MMM YY'
+      widget: 'string',
+      hint: "La date à laquelle tu as créé ton projet. Essaie de garder toujours le même format. (ex: Février 2019)"
       }
-      - { label: "Type de projet", name: "type", widget: "string", default: "Personal project"}
-      - { label: "Techniques utilisées", name: "technique", widget: "string", default: "Oil Painting"}
-      - { label: "Description", name: "description", widget: "text", default: "What I tried to express with the painting was the fact that time goes by but feelings don’t, if you’re with the right person."}
+      - { label: "Type de projet", name: "type", widget: "string", default: "", hint: "Projet personnel, projet scolaire, freelance..."}
+      - { label: "Techniques utilisées", name: "technique", widget: "string", default: "", hint: "Peinture à l'huile, Maya, Stop Motion..."}
+      - { label: "Description", name: "description", widget: "text", hint: "Le pourquoi du comment, c'est ici que tu peux raconter ta vie."}

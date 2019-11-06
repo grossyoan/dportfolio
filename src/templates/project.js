@@ -82,7 +82,7 @@ const Project = ({ pageContext, ...props }) => {
               overrides={{
                 Block: {
                   style: {
-                    width: "60%",
+                    maxWidth: "60%",
                     "@media screen and (max-width: 880px)": {
                       width: "100%",
                     },
@@ -155,7 +155,6 @@ const Project = ({ pageContext, ...props }) => {
             </Block>
           </Block>
         </div>
-        ))}
       </div>
       <SocialMedias />
       <Link to="/">

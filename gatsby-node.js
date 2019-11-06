@@ -38,7 +38,7 @@ exports.onCreatePage = async ({ page, actions }) => {
         .filter(contents => contents.category.toLowerCase() === category)
         .map(item =>
           createPage({
-            path: `/project/${item.id}`,
+            path: `/project/${item.title.toLowerCase().replace(/ /g, "-")}`,
             component: path.resolve("./src/templates/project.js"),
             context: {
               category: category,
