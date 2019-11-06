@@ -2,6 +2,8 @@ import React from "react"
 import { Link } from "gatsby"
 import { StyledLink } from "baseui/link"
 import { Block } from "baseui/block"
+import { Helmet } from "react-helmet"
+
 import importVideos from "../helpers/importVideos"
 import categories from "../../static/categories.json"
 
@@ -25,6 +27,15 @@ const Project = ({ pageContext, ...props }) => {
         )}"`,
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Doriane Olivier - Portfolio</title>
+        <link rel="canonical" href="https://dorianeolivier.fr" />
+        <meta
+          name="description"
+          content="Doriane Olivier is a french student at ECV, and an artist."
+        />
+      </Helmet>
       <Link
         to={"../../category/" + content.category.toLowerCase()}
         style={{

@@ -25,17 +25,18 @@ gatsby develop
 - [x] Add CMS
 - [x] Add responsive and adaptable display for images and videos
 - [x] Add support for all categories
+- [x] Add favicon
 - [ ] Harmonize styling methods (Baseweb, styletron, css-inline)
 - [ ] Add project secondary images handler
 - [ ] Add all content
 - [ ] Add animations
 - [ ] Design and dev the "About me" Page
 - [ ] Finish hero + responsive version
-- [ ] Add favicon
 - [ ] Change logo for custom's one
+- [ ] SEO
 
 ### SSR
 
 - [x] Fix bugs to have a proper build
 - [ ] Fix refresh issues
-- [ ] Add meta informations
+- [x] Add meta informations

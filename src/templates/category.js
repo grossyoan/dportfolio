@@ -3,6 +3,8 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StyledLink } from "baseui/link"
 import { Block } from "baseui/block"
+import { Helmet } from "react-helmet"
+
 import categories from "../../static/categories.json"
 import SocialMedias from "../components/SocialMedias"
 
@@ -27,6 +29,15 @@ const Category = ({ children, pageContext, ...props }) => {
         )}"`,
       }}
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Doriane Olivier - Portfolio</title>
+        <link rel="canonical" href="https://dorianeolivier.fr" />
+        <meta
+          name="description"
+          content="Doriane Olivier is a french student at ECV, and an artist."
+        />
+      </Helmet>
       <Link
         to="/menu"
         style={{

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 import LandingWrapper from "../components/Menu/LandingCardWrapper"
 import ImageCardWrapper from "../components/Menu/ImageCardWrapper"
 import LandingImage3D from "../../static/images/landing/landingImage3D.jpg"
@@ -12,6 +13,15 @@ import LandingImageAbout from "../../static/images/landing/landingImageAbout.jpg
 const Menu = () => {
   return (
     <LandingWrapper>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Doriane Olivier - Portfolio</title>
+        <link rel="canonical" href="https://dorianeolivier.fr/menu" />
+        <meta
+          name="description"
+          content="Doriane Olivier is a french student at ECV, and an artist."
+        />
+      </Helmet>
       <Link
         to="../category/3d"
         categoryid="3d"

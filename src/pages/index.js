@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
+
 import Hero from "../components/Hero/Hero"
 import HeroImage from "../components/Hero/HeroImage"
 import HeroBackgroundFront from "../../static/images/hero/Background_Character.png"
@@ -16,6 +18,15 @@ const Landing = () => {
 
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Doriane Olivier - Portfolio</title>
+        <link rel="canonical" href="https://dorianeolivier.fr" />
+        <meta
+          name="description"
+          content="Doriane Olivier is a french student at ECV, and an artist."
+        />
+      </Helmet>
       <div
         style={{
           width: "100%",
