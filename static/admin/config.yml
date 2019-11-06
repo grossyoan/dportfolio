@@ -35,7 +35,7 @@ collections:
           required: false,
           hint: "La thumbnail de ton projet vidéo qui sera affiché dans la catégorie correspondante (seulement si ton projet est une vidéo)."
         }
-      - { label: "Image/Vidéo du projet", name: "src", widget: "file", default: null, hint: "L'image correspondant à ton projet." }
+      - { label: "Image/Vidéo du projet", name: "src", widget: "image", default: null, hint: "L'image correspondant à ton projet." }
       - {label: 'Date du projet',
       name: 'date',
       widget: 'string',
