@@ -1,9 +1,13 @@
-import { styled } from "baseui";
+import { styled } from "baseui"
 
 const GalleryImage = styled("img", ({ ...props }) => ({
   objectFit: "cover",
-  width: "100%",
-  height: "auto"
-}));
+  width: "auto",
+  height: "100%",
+  "@media screen and (max-width: 880px)": {
+    width: "100%",
+    height: "auto",
+  },
+}))
 
-export default GalleryImage;
+export default GalleryImage

@@ -84,11 +84,13 @@ const Category = ({ children, pageContext, ...props }) => {
                 overrides={{
                   Block: {
                     style: {
-                      width: "350px",
+                      height: "200px",
+                      width: "auto",
                       padding: "4px 4px",
 
                       "@media screen and (max-width: 880px)": {
                         width: "100%",
+                        height: "auto",
                       },
                     },
                   },

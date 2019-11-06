@@ -22,6 +22,8 @@ gatsby develop
 - [x] Fix loading from local issue
 - [x] Fix htaccess issue
 - [x] Responsive version (Still has issues)
+- [x] Add CMS
+- [x] Add responsive and adaptable display for images and videos
 - [ ] Harmonize styling methods (Baseweb, styletron, css-inline)
 - [ ] Add project secondary images handler
 - [ ] Add all content
@@ -30,7 +32,6 @@ gatsby develop
 - [ ] Finish hero + responsive version
 - [ ] Add favicon
 - [ ] Change logo for custom's one
-- [ ] Add CMS
 
 ### SSR
 
