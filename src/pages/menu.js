@@ -29,35 +29,59 @@ const Menu = () => {
           3D
         </ImageCardWrapper>
       </Link>
-      <ImageCardWrapper
-        gridArea="1 / 1 / 17 / 17"
-        src={LandingImageTradi}
-        heightanimation
-        imageAnimationDelay=".9s"
-        textAnimationDelay="1.1s"
-        font="font800"
+      <Link
+        to="../category/oldschool"
+        categoryid="oldschool"
+        style={{
+          display: "contents",
+        }}
       >
-        Old School
-      </ImageCardWrapper>
-      <ImageCardWrapper
-        gridArea="17 / 9 / 33 / 17"
-        src={LandingImageIllu}
-        imageAnimationDelay=".6s"
-        textAnimationDelay=".8s"
-        font="font600"
+        <ImageCardWrapper
+          gridArea="1 / 1 / 17 / 17"
+          src={LandingImageTradi}
+          heightanimation
+          imageAnimationDelay=".9s"
+          textAnimationDelay="1.1s"
+          font="font800"
+        >
+          Old School
+        </ImageCardWrapper>
+      </Link>
+      <Link
+        to="../category/illustration"
+        categoryid="illustration"
+        style={{
+          display: "contents",
+        }}
       >
-        Illustration
-      </ImageCardWrapper>
-      <ImageCardWrapper
-        gridArea="17 / 1 / 25 / 9"
-        src={LandingImageChara}
-        heightanimation
-        imageAnimationDelay=".4s"
-        textAnimationDelay=".6s"
-        font="font600"
+        <ImageCardWrapper
+          gridArea="17 / 9 / 33 / 17"
+          src={LandingImageIllu}
+          imageAnimationDelay=".6s"
+          textAnimationDelay=".8s"
+          font="font600"
+        >
+          Illustration
+        </ImageCardWrapper>
+      </Link>
+      <Link
+        to="../category/charadesign"
+        categoryid="illustration"
+        style={{
+          display: "contents",
+        }}
       >
-        Chara Design
-      </ImageCardWrapper>
+        <ImageCardWrapper
+          gridArea="17 / 1 / 25 / 9"
+          src={LandingImageChara}
+          heightanimation
+          imageAnimationDelay=".4s"
+          textAnimationDelay=".6s"
+          font="font600"
+        >
+          Chara Design
+        </ImageCardWrapper>
+      </Link>
       <ImageCardWrapper
         gridArea="25 / 5 / 33 / 9"
         src={LandingImageResume}
