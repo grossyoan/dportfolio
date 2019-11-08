@@ -8,7 +8,6 @@ import LandingImageOldSChool from "../../static/images/landing/landingImageOldSc
 import LandingImageChara from "../../static/images/landing/landingImageChara.jpg"
 import LandingImageIllu from "../../static/images/landing/landingImageIllu.jpg"
 import LandingImageConcept from "../../static/images/landing/landingImageConcept.jpg"
-import LandingImageResume from "../../static/images/landing/landingImageResume.jpg"
 import LandingImageAbout from "../../static/images/landing/landingImageAbout.jpg"
 
 const Menu = () => {
@@ -49,7 +48,7 @@ const Menu = () => {
       >
         <ImageCardWrapper
           gridArea="1 / 1 / 17 / 17"
-          src={LandingImageOldSChool}
+          src={LandingImageConcept}
           heightanimation
           imageAnimationDelay=".9s"
           textAnimationDelay="1.1s"
@@ -102,7 +101,7 @@ const Menu = () => {
       >
         <ImageCardWrapper
           gridArea="25 / 5 / 33 / 9"
-          src={LandingImageConcept}
+          src={LandingImageOldSChool}
           imageAnimationDelay=".2s"
           textAnimationDelay=".4s"
           font="font600"
