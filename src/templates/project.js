@@ -179,7 +179,7 @@ const Project = ({ pageContext, ...props }) => {
             fontSize: "1em",
           }}
         >
-          D.O
+          D.o
         </div>
       </Link>
       <div

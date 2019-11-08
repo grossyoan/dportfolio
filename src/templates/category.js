@@ -132,7 +132,7 @@ const Category = ({ children, pageContext, ...props }) => {
           fontSize: "1em",
         }}
       >
-        D.O
+        D.o
       </div>
       <div
         style={{
