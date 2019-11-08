@@ -48,7 +48,7 @@ const Project = ({ pageContext, ...props }) => {
         <p
           style={{
             color: "white",
-            fontFamily: "Handlee",
+            fontFamily: "Coming Soon",
             fontSize: ".7em",
             margin: "0",
             lineHeight: "1em",
@@ -68,7 +68,7 @@ const Project = ({ pageContext, ...props }) => {
           <h1
             style={{
               color: "white",
-              fontFamily: "Handlee",
+              fontFamily: "Coming Soon",
               fontSize: "1.4em",
             }}
           >
@@ -128,7 +128,7 @@ const Project = ({ pageContext, ...props }) => {
                       marginTop: "2%",
                       width: "100%",
                     },
-                    opacity: "0.9",
+                    opacity: "1",
                     fontSize: ".7em",
                     color: "white",
                   },
