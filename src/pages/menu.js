@@ -40,7 +40,7 @@ const Menu = () => {
         </ImageCardWrapper>
       </Link>
       <Link
-        to="../category/oldschool"
+        to="../category/conceptart"
         categoryid="oldschool"
         style={{
           display: "contents",
@@ -54,7 +54,7 @@ const Menu = () => {
           textAnimationDelay="1.1s"
           font="font800"
         >
-          Old School
+          Concept Art
         </ImageCardWrapper>
       </Link>
       <Link
@@ -92,15 +92,23 @@ const Menu = () => {
           Chara Design
         </ImageCardWrapper>
       </Link>
-      <ImageCardWrapper
-        gridArea="25 / 5 / 33 / 9"
-        src={LandingImageResume}
-        imageAnimationDelay=".2s"
-        textAnimationDelay=".4s"
-        font="font600"
+      <Link
+        to="../category/oldschool"
+        categoryid="oldschool"
+        style={{
+          display: "contents",
+        }}
       >
-        Resume
-      </ImageCardWrapper>
+        <ImageCardWrapper
+          gridArea="25 / 5 / 33 / 9"
+          src={LandingImageResume}
+          imageAnimationDelay=".2s"
+          textAnimationDelay=".4s"
+          font="font600"
+        >
+          Old School
+        </ImageCardWrapper>
+      </Link>
       <ImageCardWrapper
         gridArea="25 / 1  / 33 / 5"
         src={LandingImageAbout}

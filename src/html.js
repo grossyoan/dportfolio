@@ -10,7 +10,7 @@ export default function HTML(props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <link
-          href="https://fonts.googleapis.com/css?family=Lato|News+Cycle|Cookie&display=swap"
+          href="https://fonts.googleapis.com/css?family=Handlee|News+Cycle|Cookie&display=swap"
           rel="stylesheet"
         />
         {props.headComponents}
