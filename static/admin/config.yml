@@ -22,7 +22,7 @@ collections:
       - { label: "Catégorie",
         name: "category",
         widget: "select",
-        options: ["3d", "oldschool", "charadesign", "illustration"],
+        options: ["3d", "oldschool", "charadesign", "illustration", "conceptart"],
         hint: "La catégorie de ton projet."
       }
       - { label: "Titre", name: "title", widget: "string", hint: "Le titre de ton projet."}
