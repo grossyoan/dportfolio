@@ -15,7 +15,7 @@ const ImageText = ({ children, font, animationdelay, ...props }) => {
             left: "50%",
             color: "white",
             transform: "translate(-50%, -50%)",
-            fontFamily: "Gabriela",
+            fontFamily: "Lato",
             animationDuration: "1.5s",
             animationDelay: animationdelay,
             animationFillMode: "forwards",

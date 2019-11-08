@@ -50,7 +50,7 @@ const Category = ({ children, pageContext, ...props }) => {
         <p
           style={{
             color: "white",
-            fontFamily: "Merienda",
+            fontFamily: "Lato",
             fontSize: ".7em",
             margin: "0",
             lineHeight: "1em",
@@ -70,7 +70,7 @@ const Category = ({ children, pageContext, ...props }) => {
           style={{
             color: "white",
             fontSize: "1.4em",
-            fontFamily: "Merienda",
+            fontFamily: "Lato",
             fontWeight: "normal",
             marginBottom: "0",
           }}
@@ -81,7 +81,7 @@ const Category = ({ children, pageContext, ...props }) => {
           style={{
             color: "white",
             fontSize: ".8em",
-            fontFamily: "Gabriela",
+            fontFamily: "News Cycle",
             marginTop: "20px",
             marginBottom: "5%",
           }}

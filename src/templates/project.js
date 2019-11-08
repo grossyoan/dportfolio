@@ -48,7 +48,7 @@ const Project = ({ pageContext, ...props }) => {
         <p
           style={{
             color: "white",
-            fontFamily: "Merienda",
+            fontFamily: "Lato",
             fontSize: ".7em",
             margin: "0",
             lineHeight: "1em",
@@ -68,7 +68,7 @@ const Project = ({ pageContext, ...props }) => {
           <h1
             style={{
               color: "white",
-              fontFamily: "Merienda",
+              fontFamily: "Lato",
               fontSize: "1.4em",
             }}
           >

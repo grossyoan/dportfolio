@@ -3,7 +3,7 @@ import { createTheme, lightThemePrimitives } from "baseui"
 const customTheme = createTheme(
   {
     ...lightThemePrimitives,
-    primaryFontFamily: '"Gabriela", serif',
+    primaryFontFamily: '"News Cycle", serif',
   },
   {
     colors: {
