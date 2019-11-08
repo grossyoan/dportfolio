@@ -54,7 +54,7 @@ const Project = ({ pageContext, ...props }) => {
             lineHeight: "1em",
           }}
         >
-          Back to gallery <br />
+          Retour à la catégorie <br />
           &#10229;
         </p>
       </Link>
@@ -140,7 +140,7 @@ const Project = ({ pageContext, ...props }) => {
                   margin: "0",
                 }}
               >
-                Technique: {content.technique}
+                Technique(s) utilisée(s): {content.technique}
               </p>
               <p
                 style={{

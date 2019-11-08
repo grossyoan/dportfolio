@@ -35,7 +35,7 @@ const Landing = () => {
       >
         <Link to="/menu" style={{}}>
           <Hero heroButtonClicked={heroButtonClicked}>
-            <CursorText ref={cursorTextRef}>Click to enter</CursorText>
+            <CursorText ref={cursorTextRef}>Cliquer pour entrer</CursorText>
             <HeroImage
               onClick={() => {
                 setHeroButtonClicked(!heroButtonClicked)

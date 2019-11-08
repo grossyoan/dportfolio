@@ -116,7 +116,7 @@ const Menu = () => {
         textAnimationDelay=".2s"
         font="font600"
       >
-        About
+        À propos
       </ImageCardWrapper>
     </LandingWrapper>
   )

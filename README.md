@@ -30,10 +30,12 @@ gatsby develop
 - [ ] Add project secondary images handler
 - [ ] Add all content
 - [ ] Add animations
+- [ ] Support project sorting
 - [ ] Design and dev the "About me" Page
 - [ ] Finish hero + responsive version
 - [ ] Change logo for custom's one
 - [ ] SEO
+- [ ] English handler
 
 ### SSR
 

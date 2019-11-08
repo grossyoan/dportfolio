@@ -56,7 +56,7 @@ const Category = ({ children, pageContext, ...props }) => {
             lineHeight: "1em",
           }}
         >
-          Back to categories <br />
+          Retour au menu <br />
           &#10229;
         </p>
       </Link>
