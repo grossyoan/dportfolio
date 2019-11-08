@@ -26,6 +26,7 @@ gatsby develop
 - [x] Add responsive and adaptable display for images and videos
 - [x] Add support for all categories
 - [x] Add favicon
+- [ ] Fix vertical content bug in project page
 - [ ] Harmonize styling methods (Baseweb, styletron, css-inline)
 - [ ] Add project secondary images handler
 - [ ] Add all content
