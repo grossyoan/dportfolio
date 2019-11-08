@@ -27,6 +27,7 @@ gatsby develop
 - [x] Add support for all categories
 - [x] Add favicon
 - [ ] Fix vertical content bug in project page
+- [ ] Find a way to auto compress images
 - [ ] Harmonize styling methods (Baseweb, styletron, css-inline)
 - [ ] Add project secondary images handler
 - [ ] Add all content
