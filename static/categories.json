@@ -26,5 +26,12 @@
       "description": "“Probably the type of art I do the most.”",
       "background": "categories/3dBackground.jpg"
     }
+  ],
+  "conceptart": [
+    {
+      "title": "Concept Art",
+      "description": "“More than a concept.”",
+      "background": "categories/3dBackground.jpg"
+    }
   ]
 }

@@ -41,7 +41,7 @@ const Menu = () => {
       </Link>
       <Link
         to="../category/conceptart"
-        categoryid="oldschool"
+        categoryid="conceptart"
         style={{
           display: "contents",
         }}
