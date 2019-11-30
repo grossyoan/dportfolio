@@ -1,14 +1,11 @@
 {
-  "category": "3d",
-  "title": "Woody Fanart",
-  "isVideo": false,
   "src": "/images/uploads/landingImage3D.jpg",
-  "src_2": null,
-  "src_3": null,
-  "src_4": null,
-  "src_5": null,
   "date": "November 2019",
-  "type": "Personal Project",
   "technique": "3D (Maya)",
-  "description": "Here's a 3d modeling I made of my favorite Pixar character."
+  "isVideo": false,
+  "src_2": "/images/uploads/landingImageChara.jpg",
+  "title": "Woody Fanart",
+  "type": "Personal Project",
+  "description": "Here's a 3d modeling I made of my favorite Pixar character.",
+  "category": "3d"
 }
