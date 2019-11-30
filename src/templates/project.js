@@ -95,7 +95,7 @@ const Project = ({ pageContext, ...props }) => {
                   style: {
                     maxWidth: "60%",
                     "@media screen and (max-width: 880px)": {
-                      width: "100%",
+                      maxWidth: "100%",
                     },
                   },
                 },
@@ -114,7 +114,11 @@ const Project = ({ pageContext, ...props }) => {
                 <img
                   src={content.src}
                   alt=""
-                  style={{ width: "100%", height: "auto" }}
+                  style={{
+                    maxWidth: "100%",
+                    height: "auto",
+                    maxHeight: "60vh",
+                  }}
                 />
               )}
             </Block>

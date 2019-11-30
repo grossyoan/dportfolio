@@ -26,12 +26,12 @@ const Hero = ({ children, heroButtonClicked, ...props }) => {
 }
 
 Hero.propTypes = {
-  children: PropTypes.object,
+  children: PropTypes.array,
   heroButtonClicked: PropTypes.bool,
 }
 
 Hero.defaultProps = {
-  children: {},
+  children: [],
   heroButtonClicked: false,
 }
 

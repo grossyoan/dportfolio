@@ -9,7 +9,6 @@ const StyledHeroImage = styled(
     animationdelay,
     heightanimation,
     src,
-    ishovered,
     ref,
     parallax,
     transform,
