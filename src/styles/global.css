@@ -13,6 +13,15 @@ code {
     monospace;
 }
 
+.react-images__view-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 60vh;
+}
+
+.react-images__footer {
+  display: none;
+}
 .___gatsby {
   text-align: center;
   background: "black";

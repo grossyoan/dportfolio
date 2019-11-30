@@ -35,7 +35,13 @@ collections:
           required: false,
           hint: "La thumbnail de ton projet vidéo qui sera affiché dans la catégorie correspondante (seulement si ton projet est une vidéo)."
         }
-      - { label: "Image/Vidéo du projet", name: "src", widget: "image", default: null, hint: "L'image correspondant à ton projet." }
+      - { 
+        label: "Image/Vidéo du projet", 
+        name: "src", 
+        widget: "image", 
+        default: null, 
+        hint: "L'image principale de ton projet."
+      }
       - {label: 'Date du projet',
       name: 'date',
       widget: 'string',
@@ -44,3 +50,35 @@ collections:
       - { label: "Type de projet", name: "type", widget: "string", default: "", hint: "Projet personnel, projet scolaire, freelance..."}
       - { label: "Techniques utilisées", name: "technique", widget: "string", default: "", hint: "Peinture à l'huile, Maya, Stop Motion..."}
       - { label: "Description", name: "description", widget: "text", hint: "Le pourquoi du comment, c'est ici que tu peux raconter ta vie."}
+      - { 
+        label: "Image 2 du projet", 
+        name: "src_2", 
+        widget: "image", 
+        default: null, 
+        required: false,
+        hint: "La 2ème image de ton projet."
+      }
+      - { 
+        label: "Image 3 du projet", 
+        name: "src_3", 
+        widget: "image", 
+        default: null, 
+        required: false,
+        hint: "La 3ème image de ton projet."
+      }
+      - { 
+        label: "Image 4 du projet", 
+        name: "src_4", 
+        widget: "image", 
+        default: null, 
+        required: false,
+        hint: "La 4ème image de ton projet."
+      }
+      - { 
+        label: "Image 5 du projet", 
+        name: "src_5", 
+        widget: "image", 
+        default: null, 
+        required: false,
+        hint: "La 5ème image de ton projet."
+      }

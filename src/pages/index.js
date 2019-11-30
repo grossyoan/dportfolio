@@ -11,6 +11,8 @@ import Particles from "../components/Hero/Particles"
 import CursorText from "../components/Hero/CursorText"
 import Layout from "../components/layout"
 
+import "../styles/global.css"
+
 const Landing = () => {
   const [heroButtonClicked, setHeroButtonClicked] = useState(false)
   const parallaxRef = useRef("parallax")

@@ -11,8 +11,18 @@ import SocialMedias from "../components/SocialMedias"
 
 import importImages from "../helpers/importImages"
 
+import Carousel from "react-images"
+
 const Project = ({ pageContext, ...props }) => {
   const content = pageContext.item
+  const views = []
+  for (const element in content) {
+    if (element.substring(0, 3) == "src") {
+      if (content[element] != null) {
+        views.push({ src: content[element] })
+      }
+    }
+  }
   return (
     <div
       style={{
@@ -111,15 +121,7 @@ const Project = ({ pageContext, ...props }) => {
                   src={importVideos(content.src)}
                 ></video>
               ) : (
-                <img
-                  src={content.src}
-                  alt=""
-                  style={{
-                    maxWidth: "100%",
-                    height: "auto",
-                    maxHeight: "60vh",
-                  }}
-                />
+                <Carousel isModal={true} views={views} />
               )}
             </Block>
             <Block
