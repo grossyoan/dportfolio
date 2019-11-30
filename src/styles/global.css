@@ -20,7 +20,7 @@ code {
 }
 
 .react-images__footer {
-  display: none;
+  display: none !important;
 }
 .___gatsby {
   text-align: center;

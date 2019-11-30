@@ -29,7 +29,7 @@ gatsby develop
 - [x] Fix vertical content bug in project page
 - [ ] Find a way to auto compress images
 - [ ] Harmonize styling methods (Baseweb, styletron, css-inline)
-- [ ] Add project secondary images handler
+- [x] Add project secondary images handler
 - [ ] Add all content
 - [ ] Add animations
 - [ ] Support project sorting
