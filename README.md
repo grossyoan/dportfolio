@@ -27,14 +27,12 @@ gatsby develop
 - [x] Add support for all categories
 - [x] Add favicon
 - [x] Fix vertical content bug in project page
-- [ ] Find a way to auto compress images
-- [ ] Harmonize styling methods (Baseweb, styletron, css-inline)
 - [x] Add project secondary images handler
-- [ ] Add all content
+- [ ] Find a way to auto compress images
 - [ ] Add animations
 - [ ] Support project sorting
 - [ ] Design and dev the "About me" Page
-- [ ] Finish hero + responsive version
+- [ ] Finish hero (Add video) + responsive version
 - [ ] Change logo for custom's one
 - [ ] SEO
 - [ ] English handler
