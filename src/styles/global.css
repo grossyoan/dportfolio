@@ -26,3 +26,7 @@ code {
   text-align: center;
   background: "black";
 }
+
+img {
+  pointer-events: none;
+}
