@@ -14,9 +14,9 @@ code {
 }
 
 .react-images__view-image {
-  max-width: 100%;
-  height: auto;
-  max-height: 60vh;
+  max-width: 100% !important;
+  height: auto !important;
+  max-height: 60vh !important;
 }
 
 .react-images__footer {
