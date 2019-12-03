@@ -23,6 +23,10 @@ exports.onCreatePage = async ({ page, actions }) => {
   })
   const categoriess = Object.keys(categories)
 
+  createPage({
+    path: "category/oldschool/*",
+  })
+
   categoriess.forEach(category => {
     createPage({
       path: `/category/${category}`,
@@ -33,20 +37,22 @@ exports.onCreatePage = async ({ page, actions }) => {
           contents => contents.category.toLowerCase() === category
         ),
       },
-    }),
-      contents
-        .filter(contents => contents.category.toLowerCase() === category)
-        .map(item =>
-          createPage({
-            path: `/project/${item.title.toLowerCase().replace(/ /g, "-")}`,
-            component: path.resolve("./src/templates/project.js"),
-            context: {
-              category: category,
-              id: item.id,
-              item: item,
-            },
-          })
-        )
+    })
+
+    contents
+      .filter(contents => contents.category.toLowerCase() === category)
+      .map(item =>
+        createPage({
+          path: `/project/${item.title.toLowerCase().replace(/ /g, "-")}`,
+          component: path.resolve("./src/templates/project.js"),
+          context: {
+            category: category,
+            id: item.id,
+            item: item,
+          },
+        })
+      )
+
     createPage(page)
   })
 }
