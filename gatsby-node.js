@@ -23,10 +23,6 @@ exports.onCreatePage = async ({ page, actions }) => {
   })
   const categoriess = Object.keys(categories)
 
-  createPage({
-    path: "category/oldschool/*",
-  })
-
   categoriess.forEach(category => {
     createPage({
       path: `/category/${category}`,
