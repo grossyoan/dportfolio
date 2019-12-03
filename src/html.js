@@ -13,7 +13,7 @@ export default function HTML(props) {
           href="https://fonts.googleapis.com/css?family=Coming+Soon|News+Cycle|Cookie&display=swap"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href="/layout.css" />
+        <link rel="stylesheet" href="/global.css" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
