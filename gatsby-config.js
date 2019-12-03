@@ -41,11 +41,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-  developMiddleware: app => {
-    app.use((req, res, next) => {
-      if (req.path.includes("page-data.json"))
-        res.redirect(`/page-data${req.path}`)
-      else next()
-    })
-  },
 }

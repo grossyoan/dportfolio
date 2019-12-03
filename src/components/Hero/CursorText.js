@@ -11,7 +11,7 @@ const StyledCursor = styled("h3", ({ ref, ...props }) => ({
 const CursorText = forwardRef(({ children, ...props }, ref) => {
   useEffect(() => {
     cursorTextFollowing(ref.current)
-  })
+  }, [])
   return (
     <StyledCursor ref={ref} {...props}>
       {children}

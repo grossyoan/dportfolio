@@ -14,8 +14,6 @@ import customTheme from "../theme/customTheme"
 import Category from "../templates/category"
 import Project from "../templates/project"
 
-import "./layout.css"
-
 const Layout = ({ children }) => {
   return (
     <BaseProvider theme={customTheme}>

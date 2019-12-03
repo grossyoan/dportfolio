@@ -24,7 +24,7 @@ const StyledHeroImage = styled(
 const HeroImage = forwardRef(({ src, parallax, ...props }, ref) => {
   useEffect(() => {
     if (ref) parallaxEffect(ref.current)
-  })
+  }, [])
   return <StyledHeroImage src={src} ref={ref} parallax={parallax} {...props} />
 })
 
