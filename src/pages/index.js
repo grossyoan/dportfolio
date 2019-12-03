@@ -28,7 +28,6 @@ const Landing = () => {
           name="description"
           content="Doriane Olivier is a french student at ECV, and an artist."
         />
-        <link rel="stylesheet" href="/layout.css" />
       </Helmet>
       <div
         style={{
