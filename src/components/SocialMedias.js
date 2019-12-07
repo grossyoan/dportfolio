@@ -1,5 +1,4 @@
 import * as React from "react"
-import { StyledLink } from "baseui/link"
 import Link from "./Link"
 export default ({ href, children, ...props }) => (
   <div

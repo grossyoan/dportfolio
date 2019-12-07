@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import TransitionLink from 'gatsby-plugin-transition-link'
 
 export default function HTML(props) {
   return (
