@@ -24,7 +24,7 @@ const Menu = () => {
         />
       </Helmet>
       <AniLink
-      cover
+        cover
         to="../category/illustration"
         categoryid="illustration"
         style={{
@@ -42,7 +42,7 @@ const Menu = () => {
         </ImageCardWrapper>
       </AniLink>
       <AniLink
-      cover
+        cover
         to="../category/conceptart"
         categoryid="conceptart"
         style={{
@@ -55,13 +55,13 @@ const Menu = () => {
           heightanimation
           imageAnimationDelay=".9s"
           textAnimationDelay="1.1s"
-          font="font800"
+          font="1em"
         >
           Concept Art
         </ImageCardWrapper>
       </AniLink>
       <AniLink
-      cover
+        cover
         to="../category/3d"
         categoryid="3d"
         style={{
@@ -73,15 +73,15 @@ const Menu = () => {
           src={LandingImage3D}
           imageAnimationDelay=".6s"
           textAnimationDelay=".8s"
-          font="font600"
+          font="1em"
         >
           3D
         </ImageCardWrapper>
       </AniLink>
       <AniLink
-      cover
+        cover
         to="../category/charadesign"
-        categoryid="illustration"
+        categoryid="charadesign"
         style={{
           display: "contents",
         }}
@@ -89,16 +89,16 @@ const Menu = () => {
         <ImageCardWrapper
           gridArea="17 / 1 / 25 / 9"
           src={LandingImageChara}
-          heightanimation
+          // heightanimation
           imageAnimationDelay=".4s"
           textAnimationDelay=".6s"
-          font="font600"
+          font="1em"
         >
           Chara Design
         </ImageCardWrapper>
       </AniLink>
       <AniLink
-      cover
+        cover
         to="../category/oldschool"
         categoryid="oldschool"
         style={{
@@ -110,7 +110,7 @@ const Menu = () => {
           src={LandingImageOldSChool}
           imageAnimationDelay=".2s"
           textAnimationDelay=".4s"
-          font="font600"
+          font="1em"
         >
           Old School
         </ImageCardWrapper>
@@ -120,7 +120,7 @@ const Menu = () => {
         src={LandingImageAbout}
         imageAnimationDelay="0s"
         textAnimationDelay=".2s"
-        font="font600"
+        font="1em"
       >
         À propos
       </ImageCardWrapper>
