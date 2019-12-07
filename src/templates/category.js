@@ -13,6 +13,9 @@ import GalleryImage from "../components/Category/GalleryImage"
 
 import importImages from "../helpers/importImages"
 
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
+
 const Category = ({ children, pageContext, ...props }) => {
   const categoryid = pageContext.id
   const content = pageContext.item
@@ -38,7 +41,8 @@ const Category = ({ children, pageContext, ...props }) => {
           content="Doriane Olivier is a french student at ECV, and an artist."
         />
       </Helmet>
-      <Link
+      <AniLink
+      cover
         to="/menu"
         style={{
           color: "transparent",
@@ -59,7 +63,7 @@ const Category = ({ children, pageContext, ...props }) => {
           Retour au menu <br />
           &#10229;
         </p>
-      </Link>
+      </AniLink>
       <div
         style={{
           width: "70%",
@@ -90,7 +94,9 @@ const Category = ({ children, pageContext, ...props }) => {
         </p>
         <CategoryGallery>
           {content.map(item => (
-            <Link
+            <AniLink
+            cover
+            bg="#000000"
               to={
                 "../../project/" + item.title.toLowerCase().replace(/ /g, "-")
               }
@@ -117,7 +123,7 @@ const Category = ({ children, pageContext, ...props }) => {
                   <GalleryImage src={item.src} />
                 )}
               </Block>
-            </Link>
+            </AniLink>
           ))}
         </CategoryGallery>
       </div>

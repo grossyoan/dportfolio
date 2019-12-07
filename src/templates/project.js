@@ -12,12 +12,13 @@ import SocialMedias from "../components/SocialMedias"
 import importImages from "../helpers/importImages"
 
 import Carousel from "react-images"
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const Project = ({ pageContext, ...props }) => {
   const content = pageContext.item
   const views = []
   for (const element in content) {
-    if (element.substring(0, 3) == "src") {
+    if (element.substring(0, 3) === "src") {
       if (content[element] != null) {
         views.push({ src: content[element] })
       }
@@ -46,7 +47,8 @@ const Project = ({ pageContext, ...props }) => {
           content="Doriane Olivier is a french student at ECV, and an artist."
         />
       </Helmet>
-      <Link
+      <AniLink
+      cover
         to={"../../category/" + content.category.toLowerCase()}
         style={{
           color: "transparent",
@@ -67,7 +69,7 @@ const Project = ({ pageContext, ...props }) => {
           Retour à la catégorie <br />
           &#10229;
         </p>
-      </Link>
+      </AniLink>
       <div>
         <div
           style={{
