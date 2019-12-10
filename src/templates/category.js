@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { StyledLink } from "baseui/link"
 import { Helmet } from "react-helmet"
 
 import categories from "../../static/categories.json"

@@ -33,8 +33,8 @@ const Menu = () => {
         <ImageCardWrapper
           gridArea="1 / 17 / 33 / 33"
           src={LandingImageIllu}
-          imageAnimationDelay="1.1s"
-          textAnimationDelay="1.3s"
+          imageAnimationDelay="1.3"
+          textAnimationDelay="1.5"
           font="1em"
         >
           Illustration
@@ -52,8 +52,8 @@ const Menu = () => {
           gridArea="1 / 1 / 17 / 17"
           src={LandingImageConcept}
           heightanimation
-          imageAnimationDelay=".9s"
-          textAnimationDelay="1.1s"
+          imageAnimationDelay="1.1"
+          textAnimationDelay="1.3"
           font="1em"
         >
           Concept Art
@@ -70,8 +70,8 @@ const Menu = () => {
         <ImageCardWrapper
           gridArea="17 / 9 / 33 / 17"
           src={LandingImage3D}
-          imageAnimationDelay=".6s"
-          textAnimationDelay=".8s"
+          imageAnimationDelay=".8"
+          textAnimationDelay="1"
           font="1em"
         >
           3D
@@ -88,9 +88,9 @@ const Menu = () => {
         <ImageCardWrapper
           gridArea="17 / 1 / 25 / 9"
           src={LandingImageChara}
-          // heightanimation
-          imageAnimationDelay=".4s"
-          textAnimationDelay=".6s"
+          heightanimation
+          imageAnimationDelay=".6"
+          textAnimationDelay=".8"
           font="1em"
         >
           Chara Design
@@ -107,8 +107,8 @@ const Menu = () => {
         <ImageCardWrapper
           gridArea="25 / 5 / 33 / 9"
           src={LandingImageOldSChool}
-          imageAnimationDelay=".2s"
-          textAnimationDelay=".4s"
+          imageAnimationDelay=".4"
+          textAnimationDelay=".6"
           font="1em"
         >
           Old School
@@ -117,8 +117,8 @@ const Menu = () => {
       <ImageCardWrapper
         gridArea="25 / 1  / 33 / 5"
         src={LandingImageAbout}
-        imageAnimationDelay="0s"
-        textAnimationDelay=".2s"
+        imageAnimationDelay=".2"
+        textAnimationDelay=".4"
         font="1em"
       >
         À propos

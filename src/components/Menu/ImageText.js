@@ -1,7 +1,16 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
-import { Block } from "baseui/block"
+
 const ImageText = ({ children, font, animationdelay, ...props }) => {
+  let [opacity, setOpacity] = useState("0")
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setOpacity("1")
+    }, animationdelay * 1000)
+
+    return () => clearTimeout(timeoutId)
+  }, [])
+
   return (
     <div
       css={{
@@ -15,22 +24,12 @@ const ImageText = ({ children, font, animationdelay, ...props }) => {
         transform: "translate(-50%, -50%)",
         fontFamily: "Coming Soon",
         fontWeight: "bold",
-        animationDuration: "1.5s",
-        animationDelay: animationdelay,
-        animationFillMode: "forwards",
-        animationTimingFunction: "ease",
+        transition: "opacity 1.5s ease",
         opacity: "0",
         fontSize: font,
         userSelect: "none",
-        animationName: {
-          from: {
-            opacity: "0",
-          },
-          to: {
-            opacity: "1",
-          },
-        },
       }}
+      style={{ opacity: opacity }}
     >
       {children}
     </div>

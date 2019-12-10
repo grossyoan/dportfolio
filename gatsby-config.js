@@ -5,15 +5,6 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-styletron`,
-      options: {
-        // You can pass options to Styletron.
-        prefix: "_",
-        // Disable dev debug mode, enabled by default
-        debug: false,
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

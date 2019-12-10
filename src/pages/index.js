@@ -43,11 +43,7 @@ const Landing = () => {
               parallax
               src={HeroBackgroundFront}
             />
-            <HeroImage
-              transform="scale(1.1)"
-              ref={parallaxRef}
-              src={HeroBackgroundBack}
-            />
+            <HeroImage ref={parallaxRef} src={HeroBackgroundBack} />
             <Particles />
           </Hero>
         </Link>
