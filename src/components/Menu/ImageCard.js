@@ -1,28 +1,7 @@
 import React, { useEffect } from "react"
 import PropTypes from "prop-types"
-import { styled } from "styletron-react"
+import { css } from "@emotion/core"
 import { useState } from "react"
-
-const StyledImageCard = styled(
-  "img",
-  ({ $theme, animationdelay, heightanimation, src, ishovered, ...props }) => {
-    const style = {
-      position: "absolute",
-      left: "0",
-      bottom: "0",
-      width: heightanimation ? "100%" : "0%",
-      height: heightanimation ? "0%" : "100%",
-      objectFit: "cover",
-      transform: ishovered ? "scale(1.05)" : "scale(1)",
-      opacity: ishovered ? "0.5" : "1",
-      transition: `transform 2s ease 0.05s, opacity 1s ease 0.05s, ${
-        heightanimation ? "height" : "width"
-      } .5s ease`,
-    }
-
-    return style
-  }
-)
 
 const ImageCard = ({
   src,
@@ -41,12 +20,21 @@ const ImageCard = ({
   }, [])
 
   return (
-    <StyledImageCard
-      ishovered={ishovered}
-      heightanimation={heightanimation}
-      animationdelay={animationdelay}
+    <img
+      css={css`
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: ${heightanimation ? "100%" : "0%"};
+        height: ${heightanimation ? "0%" : "100%"};
+        object-fit: cover;
+        transform: scale(${ishovered ? 1.05 : 1});
+        opacity: ${ishovered ? 1 : 0.5};
+        transition: transform 2s ease 0.05s, opacity 1s ease 0.05s,
+          ${heightanimation ? "height" : "width"} 0.5s ease;
+      `}
       src={src}
-      $style={{ [`${heightanimation ? "height" : "width"}`]: size }}
+      style={{ [`${heightanimation ? "height" : "width"}`]: size }}
     />
   )
 }
