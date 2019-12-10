@@ -1,8 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
 import { StyledLink } from "baseui/link"
-import { Block } from "baseui/block"
 import { Helmet } from "react-helmet"
 
 import categories from "../../static/categories.json"
@@ -15,21 +13,20 @@ import importImages from "../helpers/importImages"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-
 const Category = ({ children, pageContext, ...props }) => {
   const categoryid = pageContext.id
   const content = pageContext.item
+  const mq = "@media screen and (max-width: 880px)"
+  const bg = importImages(categories[categoryid][0].background)
   return (
     <div
-      style={{
+      css={{
         position: "absolute",
         width: "100%",
         minHeight: "100vh",
         userSelect: "none",
         backgroundSize: "cover",
-        backgroundImage: `url("${importImages(
-          categories[categoryid][0].background
-        )}"`,
+        backgroundImage: `url("${bg}")`,
       }}
     >
       <Helmet>
@@ -42,9 +39,9 @@ const Category = ({ children, pageContext, ...props }) => {
         />
       </Helmet>
       <AniLink
-      cover
+        cover
         to="/menu"
-        style={{
+        css={{
           color: "transparent",
           marginTop: "40px",
           marginLeft: "5%",
@@ -52,7 +49,7 @@ const Category = ({ children, pageContext, ...props }) => {
         }}
       >
         <p
-          style={{
+          css={{
             color: "white",
             fontFamily: "Coming Soon",
             fontSize: ".7em",
@@ -65,13 +62,13 @@ const Category = ({ children, pageContext, ...props }) => {
         </p>
       </AniLink>
       <div
-        style={{
+        css={{
           width: "70%",
           margin: "0 auto",
         }}
       >
         <h1
-          style={{
+          css={{
             color: "white",
             fontSize: "1.4em",
             fontFamily: "Coming Soon",
@@ -82,7 +79,7 @@ const Category = ({ children, pageContext, ...props }) => {
           {categories[categoryid][0].title}
         </h1>
         <p
-          style={{
+          css={{
             color: "white",
             fontSize: ".8em",
             fontFamily: "News Cycle",
@@ -95,25 +92,20 @@ const Category = ({ children, pageContext, ...props }) => {
         <CategoryGallery>
           {content.map(item => (
             <AniLink
-            cover
-            bg="#000000"
+              cover
+              bg="#000000"
               to={
                 "../../project/" + item.title.toLowerCase().replace(/ /g, "-")
               }
             >
-              <Block
-                overrides={{
-                  Block: {
-                    style: {
-                      height: "200px",
-                      width: "auto",
-                      padding: "4px 4px",
-
-                      "@media screen and (max-width: 880px)": {
-                        width: "100%",
-                        height: "auto",
-                      },
-                    },
+              <div
+                css={{
+                  height: "200px",
+                  width: "auto",
+                  padding: "4px 4px",
+                  [mq]: {
+                    width: "100%",
+                    height: "auto",
                   },
                 }}
               >
@@ -122,14 +114,14 @@ const Category = ({ children, pageContext, ...props }) => {
                 ) : (
                   <GalleryImage src={item.src} />
                 )}
-              </Block>
+              </div>
             </AniLink>
           ))}
         </CategoryGallery>
       </div>
       <SocialMedias />
       <div
-        style={{
+        css={{
           position: "absolute",
           right: "50px",
           top: "40px",
@@ -141,7 +133,7 @@ const Category = ({ children, pageContext, ...props }) => {
         D.o
       </div>
       <div
-        style={{
+        css={{
           position: "absolute",
           display: "flex",
           justifyContent: "center",
@@ -152,9 +144,15 @@ const Category = ({ children, pageContext, ...props }) => {
           fontSize: ".4em",
         }}
       >
-        <StyledLink href="https://grossyoan.fr">
-          Developed with ❤️by Yoan Gross
-        </StyledLink>
+        <a
+          css={{
+            color: "white",
+            textDecoration: "none",
+          }}
+          href="https://grossyoan.fr"
+        >
+          Developed with ❤️ by Yoan Gross
+        </a>
       </div>
     </div>
   )

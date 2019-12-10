@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import LandingWrapper from "../components/Menu/LandingCardWrapper"
 import ImageCardWrapper from "../components/Menu/ImageCardWrapper"
@@ -9,7 +8,7 @@ import LandingImageChara from "../../static/images/landing/landingImageChara.jpg
 import LandingImageIllu from "../../static/images/landing/landingImageIllu.jpg"
 import LandingImageConcept from "../../static/images/landing/landingImageConcept.jpg"
 import LandingImageAbout from "../../static/images/landing/landingImageAbout.jpg"
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Menu = () => {
   return (

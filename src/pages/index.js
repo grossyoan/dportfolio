@@ -28,12 +28,12 @@ const Landing = () => {
         />
       </Helmet>
       <div
-        style={{
+        css={{
           width: "100%",
           height: "100%",
         }}
       >
-        <Link to="/menu" style={{}}>
+        <Link to="/menu">
           <Hero heroButtonClicked={heroButtonClicked}>
             <CursorText ref={cursorTextRef}>Cliquer pour entrer</CursorText>
             <HeroImage

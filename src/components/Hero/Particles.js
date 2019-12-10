@@ -4,7 +4,7 @@ import Particles from "react-particles-js"
 const StyledParticles = () => {
   return (
     <div
-      style={{
+      css={{
         position: "absolute",
         zIndex: "-2",
         right: "0",

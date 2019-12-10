@@ -1,7 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import { StyledLink } from "baseui/link"
-import { Block } from "baseui/block"
 import { Helmet } from "react-helmet"
 
 import importVideos from "../helpers/importVideos"
@@ -12,7 +10,7 @@ import SocialMedias from "../components/SocialMedias"
 import importImages from "../helpers/importImages"
 
 import Carousel from "react-images"
-import AniLink from "gatsby-plugin-transition-link/AniLink";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Project = ({ pageContext, ...props }) => {
   const content = pageContext.item
@@ -24,18 +22,20 @@ const Project = ({ pageContext, ...props }) => {
       }
     }
   }
+  const mq = "@media screen and (max-width: 880px)"
+  const bg = importImages(
+    categories[content.category.toLowerCase()][0].background
+  )
   return (
     <div
-      style={{
+      css={{
         position: "absolute",
         width: "100%",
         minHeight: "100vh",
         userSelect: "none",
         zIndex: "5",
         backgroundSize: "cover",
-        backgroundImage: `url("${importImages(
-          categories[content.category.toLowerCase()][0].background
-        )}"`,
+        backgroundImage: `url("${bg}")`,
       }}
     >
       <Helmet>
@@ -48,9 +48,9 @@ const Project = ({ pageContext, ...props }) => {
         />
       </Helmet>
       <AniLink
-      cover
+        cover
         to={"../../category/" + content.category.toLowerCase()}
-        style={{
+        css={{
           color: "transparent",
           marginTop: "40px",
           marginLeft: "5%",
@@ -58,7 +58,7 @@ const Project = ({ pageContext, ...props }) => {
         }}
       >
         <p
-          style={{
+          css={{
             color: "white",
             fontFamily: "Coming Soon",
             fontSize: ".7em",
@@ -72,13 +72,13 @@ const Project = ({ pageContext, ...props }) => {
       </AniLink>
       <div>
         <div
-          style={{
+          css={{
             width: "70%",
             margin: "0 auto",
           }}
         >
           <h1
-            style={{
+            css={{
               color: "white",
               fontFamily: "Coming Soon",
               fontSize: "1.4em",
@@ -86,99 +86,88 @@ const Project = ({ pageContext, ...props }) => {
           >
             {content.title}
           </h1>
-          <Block
-            overrides={{
-              Block: {
-                style: {
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  flexWrap: "wrap",
-                  flexDirection: "row",
-                  "@media screen and (max-width: 880px)": {
-                    flexDirection: "column",
-                  },
-                },
+          <div
+            css={{
+              display: "flex",
+              justifyContent: "flex-start",
+              flexWrap: "wrap",
+              flexDirection: "row",
+              [mq]: {
+                flexDirection: "column",
               },
             }}
           >
-            <Block
-              overrides={{
-                Block: {
-                  style: {
-                    maxWidth: "60%",
-                    "@media screen and (max-width: 880px)": {
-                      maxWidth: "100%",
-                    },
-                  },
+            <div
+              css={{
+                maxWidth: "60%",
+                [mq]: {
+                  maxWidth: "100%",
                 },
               }}
             >
               {content.isVideo ? (
                 <video
-                  style={{ width: "100%", height: "auto" }}
+                  css={{ width: "100%", height: "auto" }}
                   preload="auto"
                   autoPlay="true"
                   controls
                   loop
                   src={importVideos(content.src)}
-                ></video>
+                />
               ) : (
                 <Carousel isModal={true} views={views} />
               )}
-            </Block>
-            <Block
-              overrides={{
-                Block: {
-                  style: {
-                    marginLeft: "2%",
-                    width: "38%",
-                    "@media screen and (max-width: 880px)": {
-                      marginTop: "2%",
-                      width: "100%",
-                    },
-                    opacity: "1",
-                    fontSize: ".7em",
-                    color: "white",
-                  },
+            </div>
+            <div
+              css={{
+                marginLeft: "2%",
+                width: "38%",
+                opacity: "1",
+                fontSize: ".7em",
+                color: "white",
+
+                [mq]: {
+                  marginTop: "2%",
+                  width: "100%",
                 },
               }}
             >
               <p
-                style={{
+                css={{
                   margin: "0",
                 }}
               >
                 Technique(s) utilisée(s): {content.technique}
               </p>
               <p
-                style={{
+                css={{
                   margin: "0",
                 }}
               >
                 Date: {content.date}
               </p>
               <p
-                style={{
+                css={{
                   margin: "0",
                 }}
               >
                 Type: {content.type}
               </p>
               <p
-                style={{
+                css={{
                   marginTop: "20px",
                 }}
               >
                 {content.description}
               </p>
-            </Block>
-          </Block>
+            </div>
+          </div>
         </div>
       </div>
       <SocialMedias />
       <Link to="/">
         <div
-          style={{
+          css={{
             position: "absolute",
             right: "50px",
             top: "40px",
@@ -191,7 +180,7 @@ const Project = ({ pageContext, ...props }) => {
         </div>
       </Link>
       <div
-        style={{
+        css={{
           position: "absolute",
           display: "flex",
           justifyContent: "center",
@@ -202,9 +191,15 @@ const Project = ({ pageContext, ...props }) => {
           fontSize: ".4em",
         }}
       >
-        <StyledLink href="https://grossyoan.fr">
-          Developed with ❤️by Yoan Gross
-        </StyledLink>
+        <a
+          css={{
+            color: "white",
+            textDecoration: "none",
+          }}
+          href="https://grossyoan.fr"
+        >
+          Developed with ❤️ by Yoan Gross
+        </a>
       </div>
     </div>
   )

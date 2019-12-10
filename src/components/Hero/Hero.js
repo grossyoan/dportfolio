@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 const Hero = ({ children, heroButtonClicked, ...props }) => {
   return (
     <div
-      style={{
+      css={{
         position: "absolute",
         left: "0",
         top: "0",

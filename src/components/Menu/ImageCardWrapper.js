@@ -20,7 +20,7 @@ const ImageCardWrapper = ({
       onClick={() => {
         setSelected(!selected)
       }}
-      style={{
+      css={{
         position: "relative",
         background: "black",
         gridArea: gridArea,
