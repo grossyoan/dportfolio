@@ -1,1 +1,1 @@
-export default path => `../../images/${path}`
+export default path => `/images/${path}`
