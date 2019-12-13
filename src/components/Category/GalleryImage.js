@@ -25,7 +25,7 @@ export default ({ src, alt }) => {
           width: 100%;
           height: auto;
         }
-        transition: opacity, 0.5s ease;
+        transition: opacity 0.5s ease;
         opacity: ${isLoaded ? 1 : 0};
       `}
     />
