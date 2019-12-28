@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import importVideos from "../helpers/importVideos"
@@ -10,7 +9,7 @@ import SocialMedias from "../components/SocialMedias"
 import importImages from "../helpers/importImages"
 
 import Carousel from "react-images"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 const Project = ({ pageContext, ...props }) => {
   const content = pageContext.item
@@ -47,8 +46,7 @@ const Project = ({ pageContext, ...props }) => {
           content="Doriane Olivier is a french student at ECV, and an artist."
         />
       </Helmet>
-      <AniLink
-        cover
+      <Link
         to={"../../category/" + content.category.toLowerCase()}
         css={{
           color: "transparent",
@@ -69,7 +67,7 @@ const Project = ({ pageContext, ...props }) => {
           Retour à la catégorie <br />
           &#10229;
         </p>
-      </AniLink>
+      </Link>
       <div>
         <div
           css={{

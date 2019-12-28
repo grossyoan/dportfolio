@@ -8,7 +8,7 @@ import LandingImageChara from "../../static/images/landing/landingImageChara.jpg
 import LandingImageIllu from "../../static/images/landing/landingImageIllu.jpg"
 import LandingImageConcept from "../../static/images/landing/landingImageConcept.jpg"
 import LandingImageAbout from "../../static/images/landing/landingImageAbout.jpg"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 const Menu = () => {
   return (
@@ -22,9 +22,8 @@ const Menu = () => {
           content="Doriane Olivier is a french student at ECV, and an artist."
         />
       </Helmet>
-      <AniLink
-        cover
-        to="../category/illustration"
+      <Link
+        to="category/illustration"
         categoryid="illustration"
         style={{
           display: "contents",
@@ -39,10 +38,9 @@ const Menu = () => {
         >
           Illustration
         </ImageCardWrapper>
-      </AniLink>
-      <AniLink
-        cover
-        to="../category/conceptart"
+      </Link>
+      <Link
+        to="category/conceptart"
         categoryid="conceptart"
         style={{
           display: "contents",
@@ -58,10 +56,9 @@ const Menu = () => {
         >
           Concept Art
         </ImageCardWrapper>
-      </AniLink>
-      <AniLink
-        cover
-        to="../category/3d"
+      </Link>
+      <Link
+        to="category/3d"
         categoryid="3d"
         style={{
           display: "contents",
@@ -76,10 +73,9 @@ const Menu = () => {
         >
           3D
         </ImageCardWrapper>
-      </AniLink>
-      <AniLink
-        cover
-        to="../category/charadesign"
+      </Link>
+      <Link
+        to="category/charadesign"
         categoryid="charadesign"
         style={{
           display: "contents",
@@ -95,10 +91,9 @@ const Menu = () => {
         >
           Chara Design
         </ImageCardWrapper>
-      </AniLink>
-      <AniLink
-        cover
-        to="../category/oldschool"
+      </Link>
+      <Link
+        to="category/oldschool"
         categoryid="oldschool"
         style={{
           display: "contents",
@@ -113,7 +108,7 @@ const Menu = () => {
         >
           Old School
         </ImageCardWrapper>
-      </AniLink>
+      </Link>
       <ImageCardWrapper
         gridArea="25 / 1  / 33 / 5"
         src={LandingImageAbout}
