@@ -10,6 +10,7 @@ import HeroBackgroundBack from "../../static/images/hero/Background_Back.png"
 import Particles from "../components/Hero/Particles"
 import CursorText from "../components/Hero/CursorText"
 import Layout from "../components/layout"
+import PageTransition from "gatsby-plugin-page-transitions"
 
 const Landing = () => {
   const [heroButtonClicked, setHeroButtonClicked] = useState(false)
@@ -17,38 +18,40 @@ const Landing = () => {
   const cursorTextRef = useRef("cursorText")
 
   return (
-    <Layout>
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>Doriane Olivier - Portfolio</title>
-        <link rel="canonical" href="https://dorianeolivier.fr" />
-        <meta
-          name="description"
-          content="Doriane Olivier is a french student at ECV, and an artist."
-        />
-      </Helmet>
-      <div
-        css={{
-          width: "100%",
-          height: "100%",
-        }}
-      >
-        <Link to="/menu">
-          <Hero heroButtonClicked={heroButtonClicked}>
-            <CursorText ref={cursorTextRef}>Cliquer pour entrer</CursorText>
-            <HeroImage
-              onClick={() => {
-                setHeroButtonClicked(!heroButtonClicked)
-              }}
-              parallax
-              src={HeroBackgroundFront}
-            />
-            <HeroImage ref={parallaxRef} src={HeroBackgroundBack} />
-            <Particles />
-          </Hero>
-        </Link>
-      </div>
-    </Layout>
+    <PageTransition>
+      <Layout>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Doriane Olivier - Portfolio</title>
+          <link rel="canonical" href="https://dorianeolivier.fr" />
+          <meta
+            name="description"
+            content="Doriane Olivier is a french student at ECV, and an artist."
+          />
+        </Helmet>
+        <div
+          css={{
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <Link to="/menu">
+            <Hero heroButtonClicked={heroButtonClicked}>
+              <CursorText ref={cursorTextRef}>Cliquer pour entrer</CursorText>
+              <HeroImage
+                onClick={() => {
+                  setHeroButtonClicked(!heroButtonClicked)
+                }}
+                parallax
+                src={HeroBackgroundFront}
+              />
+              <HeroImage ref={parallaxRef} src={HeroBackgroundBack} />
+              <Particles />
+            </Hero>
+          </Link>
+        </div>
+      </Layout>
+    </PageTransition>
   )
 }
 

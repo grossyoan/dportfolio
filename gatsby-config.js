@@ -6,6 +6,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-page-transitions`,
+    {
+      resolve: "gatsby-plugin-page-transitions",
+      options: {
+        transitionTime: 500,
+      },
+    },
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-emotion`,
     {
