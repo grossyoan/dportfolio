@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-page-transitions",
       options: {
-        transitionTime: 400,
+        transitionTime: 600,
       },
     },
     `gatsby-plugin-netlify-cms`,

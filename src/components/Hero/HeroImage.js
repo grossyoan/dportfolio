@@ -16,6 +16,7 @@ const StyledHeroImage = ({
       ref={ref}
       parallax={parallax}
       css={{
+        height: "100%",
         position: "absolute",
         zIndex: parallax ? "-1" : "-3",
         transform: "scale(1.1)",
