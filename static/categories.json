@@ -2,35 +2,35 @@
   "3d": [
     {
       "title": "3D",
-      "description": "“I do my 3d like I live my life: like restless adventuver.”",
+      "description": "",
       "background": "categories/background.jpg"
     }
   ],
   "charadesign": [
     {
       "title": "Chara Design",
-      "description": "“I love chara design because it's the best way to make the viewer feels your art.”",
+      "description": "",
       "background": "categories/background.jpg"
     }
   ],
   "oldschool": [
     {
       "title": "Old School",
-      "description": "“Old School is cool. There are so many techniques to master.”",
+      "description": "",
       "background": "categories/background.jpg"
     }
   ],
   "illustration": [
     {
       "title": "Illustration",
-      "description": "“Probably the type of art I do the most.”",
+      "description": "",
       "background": "categories/background.jpg"
     }
   ],
   "conceptart": [
     {
       "title": "Concept Art",
-      "description": "“More than a concept.”",
+      "description": "",
       "background": "categories/background.jpg"
     }
   ]
