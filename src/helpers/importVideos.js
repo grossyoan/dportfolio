@@ -1,1 +1,1 @@
-export default path => `videos/${path}`
+export default path => `${path}`

@@ -9,6 +9,8 @@ const CursorText = forwardRef(({ children, ...props }, ref) => {
     <h3
       css={{
         position: "absolute",
+        fontFamily: "Coming Soon",
+
         color: "white ",
         fontSize: ".7em",
       }}

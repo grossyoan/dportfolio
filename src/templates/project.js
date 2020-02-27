@@ -74,7 +74,7 @@ const Project = ({ pageContext, ...props }) => {
           <div
             css={{
               width: "70%",
-              margin: "0 auto",
+              margin: "0 auto 100px auto",
             }}
           >
             <h1
