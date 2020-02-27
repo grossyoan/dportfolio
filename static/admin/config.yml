@@ -27,20 +27,29 @@ collections:
       }
       - { label: "Titre", name: "title", widget: "string", hint: "Le titre de ton projet."}
       - { label: "Vidéo ?", name: "isVideo", widget: "boolean", default: false, hint: "Ton projet est une vidéo ? Sélectionne moi."}
-      - {
-          label: "Thumbnail Vidéo",
-          name: "thumbnail",
-          widget: "file",
-          default: null,
-          required: false,
-          hint: "La thumbnail de ton projet vidéo qui sera affiché dans la catégorie correspondante (seulement si ton projet est une vidéo)."
-        }
+     
       - { 
-        label: "Image/Vidéo du projet", 
+        label: "Image du projet", 
         name: "src", 
         widget: "image", 
         default: null, 
         hint: "L'image principale de ton projet."
+      }
+      - {
+        label: "Vidéo du projet (Si le projet est une vidéo)",
+        name: "src",
+        widget: "file",
+        default: null,
+        required: false,
+        hint: "La vidéo de ton projet."
+      }
+      - {
+        label: "Thumbnail Vidéo (Si le projet est une vidéo)",
+        name: "thumbnail",
+        widget: "file",
+        default: null,
+        required: false,
+        hint: "La thumbnail de ton projet vidéo qui sera affiché dans la catégorie correspondante (seulement si ton projet est une vidéo)."
       }
       - {label: 'Date du projet',
       name: 'date',
