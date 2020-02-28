@@ -1,10 +1,11 @@
 {
-  "category": "3d",
-  "title": "Saut ",
-  "isVideo": true,
   "src": "/images/uploads/video_anim_4_compressed.mp4",
+  "thumbnail": "/images/uploads/capture3.png",
   "date": "Février 2020",
-  "type": "Exercice d'animation 3D ",
   "technique": "MAYA ",
-  "description": "Le modèle utilisé dans cette vidéo ne m'appartient pas. \nIl s'agit du modèle Ultimate Bony. "
+  "isVideo": true,
+  "title": "Saut ",
+  "type": "Exercice d'animation 3D ",
+  "description": "Le modèle utilisé dans cette vidéo ne m'appartient pas. \nIl s'agit du modèle Ultimate Bony. ",
+  "category": "3d"
 }
