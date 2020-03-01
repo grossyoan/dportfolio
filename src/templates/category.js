@@ -131,28 +131,6 @@ const Category = ({ children, pageContext, ...props }) => {
         >
           D.o
         </div>
-        <div
-          css={{
-            position: "absolute",
-            display: "flex",
-            justifyContent: "center",
-            width: "100%",
-            right: "0",
-            bottom: "2%",
-            fonSize: "inherit",
-            fontSize: ".4em",
-          }}
-        >
-          <a
-            css={{
-              color: "white",
-              textDecoration: "none",
-            }}
-            href="https://grossyoan.fr"
-          >
-            Developed with ❤️ by Yoan Gross
-          </a>
-        </div>
       </div>
     </PageTransition>
   )
